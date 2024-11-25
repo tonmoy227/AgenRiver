@@ -1,0 +1,50 @@
+/* 
+    video-1-start
+*/
+.agn-video-1 {
+    &-area {
+        margin-top: -80px;
+        clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+    }
+
+    &-content {
+        height: 1035px;
+
+        @media #{$lg,$md} {
+            height: 800px;
+        }
+
+        @media #{$xs} {
+            height: 500px;
+        }
+
+        &-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        img {
+            filter: grayscale(1);
+        }
+    }
+
+    &-shape {
+        display: flex;
+
+        &-posi {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+        }
+    }
+    
+}
+
+/* 
+    video-1-end
+*/
+

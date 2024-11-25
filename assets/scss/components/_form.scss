@@ -1,0 +1,218 @@
+/* 
+    form-1-start
+*/
+.pf-form-1 {
+
+    &-title {
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 26px;
+    }
+
+    &-box {
+        &:not(:last-child) {
+            margin-bottom: 28px;
+        }
+
+        &:focus-within .pf-form-1-label {
+            color: var(--pf-clr-pr-1);
+            opacity: 1;
+        }
+
+        .radio-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 45px;
+        }
+    }
+
+    &-label {
+        text-transform: uppercase;
+        font-weight: 500;
+        opacity: 48%;
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        transition: all .3s var(--pf-cube-2);
+    }
+
+    &-input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+        font-size: 16px;
+        font-weight: 300;
+        color: rgb(255 255 255 / 80%);
+        transition: all 0.3s var(--pf-cube-2);
+
+        &::placeholder {
+            opacity: 80%;
+        }
+
+        &:is(textarea) {
+            height: 100px;
+        }
+
+        &:hover  {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.50);
+        }
+    }
+
+
+    &-radio {
+
+        input {
+            display: none;
+            &:checked ~ {
+                span {
+                    background: var(--pf-clr-pr-1);
+                    color: var(--pf-clr-black-2);
+                }
+            }
+        }
+        span {
+            position: relative;
+            z-index: 1;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 1px;
+            background: rgb(255 255 255 / 4%);
+            backdrop-filter: blur(8px);
+            border-radius: 8px;
+            padding: 0px 10px;
+            cursor: pointer;
+            transition: all .3s var(--pf-cube-2);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 8px;
+                padding: 1.5px;
+                background: linear-gradient(215deg, rgba(42, 200, 211, 56%) 0%, rgba(42, 200, 211, 4%) 30%);
+                z-index: -1;
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+                transition: all .3s var(--pf-cube-2);
+            }
+
+            &:hover {
+                background: var(--pf-clr-pr-1);
+                color: var(--pf-clr-black-2);
+            }
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+
+
+
+
+}
+
+.fx-cta-1-form {
+    &:is(.fx-cta-4) {
+        .fx-cta-1-form-input {
+            &:focus {
+                border-color: var(--fx-clr-sd-3);
+            }
+        }
+
+        .fx-cta-1-form-btn {
+            &:hover {
+                color: var(--fx-clr-sd-3);
+            }
+        }
+    }
+}
+
+.fx-cta-1-form {
+    &:is(.fx-cta-5-form) {
+        .fx-cta-1-form-input {
+            &:focus {
+                border-color: var(--fx-clr-pr-2);
+            }
+        }
+
+        .fx-cta-1-form-btn {
+            &:hover {
+                color: var(--fx-clr-pr-2);
+            }
+        }
+    }
+}
+
+.fx-form-1 {
+    &:is(.has-home-6) {
+        .fx-form-1-box {
+            &:focus-within .fx-form-1-label {
+                color: var(--fx-clr-pr-2);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* 
+    form-1-end
+*/
+
+/* 
+    form-2-start
+*/
+.pf-form-1 {
+    &:is(.has-v2) {
+
+        .pf-form-1 {
+
+            &-label {
+                color: var(--pf-clr-black-3);
+                opacity: 64%;
+            }
+
+            &-input {
+                font-weight: 400;
+                color: rgb(33 37 39 / 80%);
+                border-color: #DFE1E5;
+
+                &:hover {
+                    color: rgb(33 37 39 / 100%);
+                }
+
+                &:focus {
+                    border-color: var(--pf-clr-pr-1);
+                }
+            }
+
+            &-box {
+                &:focus-within .pf-form-1-label {
+                    color: var(--pf-clr-pr-1);
+                    opacity: 1;
+
+                }
+            }
+        }
+
+    }
+}
+/* 
+    form-2-end
+*/

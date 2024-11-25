@@ -1,0 +1,124 @@
+/* 
+    components-start
+*/
+
+/* social-link */
+.agn-social {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 2px solid rgb(32 32 32 / 12%);
+        color: rgb(32 32 32 / 64%);
+        transition: all .5s var(--agn-cube-1);
+
+        &:hover {
+            color: var(--agn-clr-pr-1);
+            border-color: var(--agn-clr-pr-1);
+        }
+    }
+}
+
+
+
+/* back-top-1 */
+.agn-back-to-top {
+    display: block;
+    gap: 5px;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: -100px;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background: var(--agn-clr-pr-1);
+    transition: all .3s linear;
+    border-radius: 5px;
+
+    @media #{$xs} {
+        right: 15px;
+    }
+
+    .icon {
+        font-size: 18px;   
+        color: var(--agn-clr-white-1);
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        animation: agn-scroll-up 3s linear infinite; 
+
+    }
+    
+    .icon i {
+        margin: 5px 0; /* Space between icons */
+    }
+    
+
+    &:hover {
+        background: var(--agn-clr-pr-2);
+    }
+
+    &:is(.show) {
+        bottom: 30px;
+
+        @media #{$xs} {
+            bottom: 15px;
+        }
+    }
+}
+
+
+/* Scrolling animation */
+@keyframes agn-scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+/* slider-btn-1 */
+.agn-slide-btn-1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--agn-clr-gray-2);
+    border-radius: 8px;
+    fill: var(--agn-clr-gray-3);
+    color: var(--agn-clr-gray-3);
+    cursor: pointer;
+    transition: .3s ease-out;
+    background: var(--agn-clr-white-1);
+
+    svg {
+        fill: inherit;
+        transition: .3s ease-out;
+        path {
+            transition: .3s ease-out;
+            fill: inherit;   
+        }
+    }
+
+    &:hover {
+        border-color: var(--agn-clr-sd-2);
+        fill: var(--agn-clr-sd-2);
+        transform: scale(95%);
+    }
+}
+
+/* 
+    components-end
+*/
