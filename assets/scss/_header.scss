@@ -1,0 +1,209 @@
+.agt-header-section {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	.navbar-nav {
+		flex-direction: row;
+	}
+	.dropdown {
+		position: relative;
+		padding-right: 16px;
+		&:after {
+			top: 2px;
+			right: 0px;
+			content: "\f107";
+			font-size: 14px;
+			font-weight: 700;
+			font-weight: 900;
+			position: absolute;
+			color: #fff;
+			font-family: 'Font Awesome 5 free';
+			transition: 0.3s all ease-in-out;
+		}
+		&:hover {
+			.dropdown-menu {
+				visibility: visible;
+				opacity: 1;
+				clip: inherit;
+				-webkit-transform: scaleY(1);
+				-khtml-transform: scaleY(1);
+				-moz-transform: scaleY(1);
+				-ms-transform: scaleY(1);
+				-o-transform: scaleY(1);
+				transform: scaleY(1);
+			}
+		}
+	}
+	.dropdown-menu {
+		left: 0;
+		top: 55px;
+		z-index: 100;
+		margin: 0px;
+		padding: 4px 4px;
+		height: auto;
+		min-width: 270px;
+		display: none;
+		border: none;
+		border-radius: 0;
+		position: absolute;
+		opacity: 0;
+		background: var(--ag-title-color) ;
+		border-radius: 5px;
+		transform: scaleY(0);
+		transform-origin: 0 0 0;
+		-webkit-transform-origin: 0 0 0;
+		-ms-transform-origin: 0 0 0;
+		-o-transform-origin: 0 0 0;
+		text-align: left;
+		transition: all .3s ease-in-out;
+		box-shadow: -8px 8px 24px 0px rgba(0, 0, 0, 0.08);
+		.dropdown {
+			padding-right: 0;
+			&:after {
+				display: none;
+			}
+		}
+		.dropdown-menu {
+			top: 0px !important;
+			left: 100%;
+			display: none;
+			transform-origin: 0 0 0;
+			-webkit-transform-origin: 0 0 0;
+			-ms-transform-origin: 0 0 0;
+			-o-transform-origin: 0 0 0;
+			transform: scaleY(0) !important;
+			a {
+				font-size: 14px;
+				font-weight: 500;
+				color: #fff;
+			}
+		}
+		li {
+			display: block;
+			margin: 0 !important;
+			transition: .3s all ease-in-out;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:before {
+				display: none;
+			}
+			&:after {
+				color: #fff;
+				right: 15px;
+				transform: rotate(-90deg);
+				transition: .3s all ease-in-out;
+			}
+			&.dropdown:hover {
+				&:after {
+					transform: rotate(0);
+				}
+				.dropdown-menu {
+					top: 0; 
+					transform: scaleY(1) !important;
+				}
+			}
+			&.dropdown {
+				&:before {
+					color: #fff;
+					top: 10px;
+					right: 15px;
+				}
+			}
+			&:hover {
+				&:before {
+					color: #fff !important;
+				}
+			}
+		}
+		a {
+			width: 100%;
+			line-height: 1;
+			position: relative;
+			display: inline-block;
+			padding: 15px  0px 15px 18px !important;
+			font-weight: 600 !important;
+			font-size: 17px !important;
+			&:before {
+				top: 14px;
+				opacity: 0;
+				left: -0px;
+				font-size: 18px;
+				content: '\f105';
+				position: absolute;
+				visibility: hidden;
+				font-weight: 900;
+				color: var(--ag-color-1);
+				transition: all 500ms ease;
+				font-family: 'Font Awesome 5 free';
+			}
+			&:hover,
+			&.active {
+				color:  var(--ag-color-1) !important;
+				padding-left: 35px !important;
+				&:after {
+					width: 100%;
+				}
+				&:before {
+					opacity: 1;
+					left: 15px;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	&.header_type_one {
+		padding: 48px 48px 0px 60px;
+		@media #{$lg,$md,$xs} {
+			padding: 20px 15px 0px 15px;
+		}
+		.brand-logo {
+			max-width: 195px;
+			@media #{$xxs} {
+				max-width: 140px;
+			}
+		}
+		.navigation-cta {
+			gap: 12px;
+		}
+		.main-navigation {
+			padding: 10px 6px;
+			border-radius: 4px;
+			background-color: #fff;
+			@media #{$md,$xs} {
+				display: none;
+			}
+			li {
+				margin: 0px 24px;
+				@media #{$lg,$md,$xs} {
+					margin: 0px 15px;
+				}
+				a {
+					font-size: 16px;
+					color: var(--agn-clr-black-2);
+				}
+				&.dropdown {
+					&:after {
+						top: 4px;
+						color: var(--agt-base-color-2);
+					}
+				}
+			}
+		}
+		.header-cta-btn {
+			@media #{$xxs} {
+				display: none;
+			}
+			a {
+				font-size: 16px;
+				font-weight: 500;
+				padding: 13px 24px;
+				color: var(--agn-clr-black-2);
+				background-color: var(--agt-base-color-1);
+				clip-path: polygon( 100% 8.333%,100% 8.333%,99.97% 6.982%,99.883% 5.699%,99.743% 4.504%,99.556% 3.412%,99.327% 2.441%,99.059% 1.608%,98.758% 0.93%,98.428% 0.425%,98.074% 0.109%,97.701% 0%,2.299% 0%,2.299% 0%,1.926% 0.109%,1.572% 0.425%,1.242% 0.93%,0.941% 1.608%,0.673% 2.441%,0.444% 3.412%,0.257% 4.504%,0.117% 5.699%,0.03% 6.982%,0% 8.333%,0% 91.667%,0% 91.667%,0.03% 93.018%,0.117% 94.301%,0.257% 95.496%,0.444% 96.588%,0.673% 97.559%,0.941% 98.392%,1.242% 99.07%,1.572% 99.575%,1.926% 99.891%,2.299% 100%,89.14% 100%,89.14% 100%,89.314% 99.976%,89.487% 99.905%,89.656% 99.787%,89.822% 99.625%,89.985% 99.417%,90.142% 99.167%,90.294% 98.874%,90.44% 98.54%,90.579% 98.165%,90.711% 97.751%,96.298% 78.795%,99.272% 68.705%,99.272% 68.705%,99.405% 68.214%,99.526% 67.688%,99.634% 67.132%,99.729% 66.547%,99.81% 65.937%,99.877% 65.305%,99.93% 64.654%,99.969% 63.988%,99.992% 63.309%,100% 62.621%,100% 8.333% );
+			}
+		}
+	}
+}
