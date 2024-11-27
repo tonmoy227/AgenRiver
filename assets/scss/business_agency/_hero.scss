@@ -1,5 +1,5 @@
 .agt-hero-slider-section {
-	margin: 20px;
+	margin: 15px;
 	@media #{$lg,$md,$sm,$xs} {
 		margin: 0;
 	}
@@ -207,58 +207,58 @@
 	}
 }
 .swiper-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /* button style */
 .swiper-pagination-bullet {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  margin: 0 10px;
-  background-color: transparent;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+	margin: 0 10px;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s;
 }
 .swiper-pagination-bullet span {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 /* button circle */
 .progress {
-  transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 .circle-origin {
-  fill: transparent;
-  stroke: rgb(255, 255, 255);
-  stroke-width: 1;
-  stroke-linecap: round;
-  stroke-dasharray: 125.664px;
-  stroke-dashoffset: 125.664px;
+	fill: transparent;
+	stroke: rgb(255, 255, 255);
+	stroke-width: 1;
+	stroke-linecap: round;
+	stroke-dasharray: 125.664px;
+	stroke-dashoffset: 125.664px;
 }
 
 .swiper-pagination-bullet-active .circle-origin {
-  animation: progress 5s;
+	animation: progress 5s;
 }
 
 @keyframes progress {
-  0% {
-    stroke-dashoffset: 125.664px;
-  }
+	0% {
+		stroke-dashoffset: 125.664px;
+	}
 
-  90% {
-    stroke-dashoffset: 0;
-  }
+	90% {
+		stroke-dashoffset: 0;
+	}
 
-  100% {
-    stroke-dashoffset: -125.664px;
-  }
+	100% {
+		stroke-dashoffset: -125.664px;
+	}
 }

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 :root {
-    scroll-behavior: inherit;
+	scroll-behavior: inherit;
 	
 	--test-sohne-400: 'Test So:hne';
 	--test-sohne-500: 'Test So:hne Kra:ftig';
@@ -12,7 +12,7 @@
 	--unbounded: "Unbounded", sans-serif;
 	--inter: "Inter", serif;
 
-    
+	
 	--agn-clr-pr-1: #8811FF;
 	--agn-clr-pr-2: #FF275A;
 
@@ -44,8 +44,18 @@
 	
 }
 .flaticon {
-    display: inline-block;
-    line-height: 0.65;
+	display: inline-block;
+	line-height: 0.65;
+}
+a , span  {
+	display: inline-block;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	text-transform: inherit;
+	text-decoration: none;
+	transition: inherit;
 }
 $over:'(min-width: 1800px)';
 $xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
