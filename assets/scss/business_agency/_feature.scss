@@ -1,3 +1,17 @@
+@keyframes icon-bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
+	}
+}
 .agt-feature-content {
 	gap: 32px;
 	display: flex;
@@ -100,6 +114,12 @@
 		width: 70px;
 		height: 60px;
 		margin-bottom: 34px;
+		svg {
+			path {
+				stroke-dasharray: 2500;
+				stroke-dashoffset: 0;
+			}
+		}
 	}
 	.item-text {
 		h3 {
@@ -138,6 +158,11 @@
 					transform: rotate(45deg);
 				}
 			}
+		}
+	}
+	&:hover {
+		.item-icon {
+			animation: icon-bounce 1s ease-out infinite;
 		}
 	}
 }

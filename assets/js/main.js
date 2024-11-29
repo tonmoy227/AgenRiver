@@ -38,6 +38,15 @@
 			});
 		}
 	});
+	if($('.agt-split-1').length) {
+		var txtSplit = $('.agt-split-1');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+		});
+	}
 // windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -50,36 +59,51 @@
 
 			}
 			setTimeout(function() {
-				// if($('.agt-hero-slider').length) {
-				// 	let slider = new Swiper('.agt-hero-slider', {
-				// 		loop: true,
-				// 		spaceBetween: 0,
-				// 		speed: 1000,
-				// 		effect: "fade",
-				// 		fadeEffect: {
-				// 			crossFade: true
-				// 		},
-				// 		autoplay: {
-				// 			delay: 5000,
-				// 		},
-				// 		pagination: {
-				// 			el: ".agt-hero1-pagination",
-				// 			clickable: true,
-				// 			renderBullet: function (className) {
-				// 				return `
-				// 				<button class="${className}">
-				// 				<svg class="item-progress" width="24" height="24" viewbox="-3 -3 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
-				// 				<circle r="14" cx="12" cy="12" fill="transparent" stroke="#ffe6e3" stroke-width="2.5" stroke-dasharray="12.56px" stroke-dashoffset="0"></circle>
-				// 				<circle r="14" cx="12" cy="12" stroke="#ff2727" stroke-width="2.5" stroke-linecap="round" stroke-dashoffset="12px" fill="transparent" stroke-dasharray="12.56px"></circle>
-				// 				</svg>
-				// 				</button>
-				// 				`;
-				// 			}
-				// 		},
+				if($(".agt-hero-slider").length) {
+					var swiper3 = new Swiper(".agt-hero-thumb", {
+						speed: 500,
+						loop: true,
+						watchSlidesProgress: true,
+						slideToClickedSlide: true,
+						direction: 'vertical',
+						breakpoints: {
+							0: {
+								slidesPerView: 5,
+								direction: 'horizontal',
+							},
+							576: {
+								slidesPerView: 5,
+								direction: 'horizontal',
+							},
+							767: {
+								slidesPerView: 5,
+								direction: 'horizontal',
+							},
+							768: {
+								slidesPerView: 5,
+							},
+							992: {
+								slidesPerView: 5,
+							},
+						},
 
+					});
+					var swiper2 = new Swiper(".agt-hero-slider", {
+						speed: 500,
+						loop: true,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						autoplay: {
+							delay: 6000,
+						},
+						thumbs: {
+							swiper: swiper3,
+						},
 
-				// 	});
-				// }
+					});
+				}	
 
 			}, 700);
 		})
@@ -90,10 +114,58 @@
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
 	});
 
+// counter-activation
+	$('.counter').counterUp({
+		delay: 10,
+		time: 5000
+	});
 
+// wow-activation
+	if($('.wow').length){
+		var wow = new WOW({
+			boxClass:     'wow',
+			animateClass: 'animated',
+			offset:       0,
+			mobile:       true,
+			live:         true
+		});
+		wow.init();
+	};
+	// Animation 1
+	if($('.agt-sec-title').length) {
+		var txasplit2 = $(".agt-sec-title");
 
+		if(txasplit2.length == 0) return; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+			
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			
+			if( $(el).hasClass('agt-sec-anim') ){
+				gsap.set(el.split.chars, {
+					opacity: .3,
+					x: "-7",
+				});
+			}
+			
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 92%",
+					end: "top 60%",
+					markers: false,
+					scrub: 1,
+				},
 
-
-
+				x: "0",
+				y: "0",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+			
+		});
+	}
 
 })(jQuery);

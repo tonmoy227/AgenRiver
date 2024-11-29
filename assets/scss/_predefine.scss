@@ -119,7 +119,7 @@
 a {
 	color: inherit;
 	text-decoration:none;
-	transition: 500ms all ease;
+	transition: 500ms all ease-in-out;
 	&:hover, &:focus{
 		text-decoration: none;
 	}
@@ -229,6 +229,7 @@ select:visited {
 	a {
 		font-size: 16px;
 		padding: 15px 32px;
+		position: relative;
 		display: inline-block;
 		font-family: var(--test-sohne-500);
 		background-color: var(--agt-base-color-1);
@@ -237,6 +238,30 @@ select:visited {
 			top: 5px;
 			font-size: 20px;
 			position: relative;
+			transition: all 100ms ease-in-out;
+		}
+		&:before {
+			top: 0;
+			right: 0;
+			left: auto;
+			width: 0%;
+			height: 100%;
+			content: '';
+			z-index: -1;
+			position: absolute;
+			transition: 1s var(--agn-cube-1);
+			background-color: var(--agt-blue-color);
+		}
+		&:hover {
+			color: #fff;
+			&:before {
+				left: 0;
+				right: auto;
+				width: 100%;
+			}
+			i {
+				transform: rotate(45deg);
+			}
 		}
 	}
 	&.ver_2 {

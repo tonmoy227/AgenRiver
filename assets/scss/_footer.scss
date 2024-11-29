@@ -1,0 +1,245 @@
+.agt-footer-section {
+	z-index: 1;
+	overflow: hidden;
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		background: rgba(10, 29, 34, .96);
+	}
+}
+.agt-footer-content {
+	gap: 40px;
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+	}
+	@media #{$xs} {
+		justify-content: start !important;
+	}
+}
+.agt-footer-logo {
+	@media #{$md,$sm} {
+		width: 100%;
+		max-width: 50%;
+		text-align: center;
+		@media #{$xs} {
+			max-width: 100%;
+			text-align: left;
+		}
+	}
+}
+.agt-footer-menu-wrap {
+	width: 100%;
+	gap: 30px 80px;
+	max-width: 410px;
+	@media #{$lg,$md,$sm,$xs} {
+		gap: 30px 40px;
+	}
+	@media #{$md,$sm} {
+		max-width: 50%;
+	}
+	@media #{$xs} {
+		max-width: 100%;
+	}
+	@media #{$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.agt-footer-menu {
+	width: 100%;
+	max-width: 180px;
+	@media #{$xxs} {
+		max-width: 300px;
+	}
+	.widget-title {
+		color: var(--agn-clr-white-1);
+		font-size: 22px;
+		position: relative;
+		padding-bottom: 12px;
+		margin-bottom: 26px;
+		font-family: var(--test-sohne-500);
+		&:after {
+			left: 0;
+			bottom: 0;
+			height: 2px;
+			width: 38px;
+			content: '';
+			position: absolute;
+			background-color: var(--agn-clr-white-1);
+		}
+		&:before {
+			height: 1px;
+			bottom: 0;
+			content: '';
+			height: 1px;
+			width: 100%;
+			opacity: .2;
+			position: absolute;
+			background-color: var(--agn-clr-white-1);
+		}
+	}
+	li {
+		margin-bottom: 15px;
+		a {
+			opacity: .8;
+			color: var(--agn-clr-white-1);
+		}
+	}
+}
+.agt-footer-newslatter {
+	width: 100%;
+	max-width: 335px;
+	padding-top: 26px;
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 260px;
+	}
+	@media #{$xs} {
+		padding-top: 0;
+	}
+	@media #{$xxs} {
+		max-width: 100%;
+	}
+	h3 {
+		color: #fff;
+		font-size: 44px;
+		line-height: 1.1;
+		letter-spacing: -1px;
+		padding-bottom: 45px;
+		font-family: var(--test-sohne-300);
+	}
+	form {
+		position: relative;
+		input {
+			width: 100%;
+			height: 38px;
+			border: none;
+			background-color: transparent;
+			border-bottom: 1px solid rgba(255, 255, 255, .24);
+			&::placeholder {
+				color: rgba(255, 255, 255, 0.72);
+			}
+		}
+		button {
+			top: 0;
+			right: 0;
+			border: none;
+			position: absolute;
+			color: var(--agt-base-color-1);
+			background-color: transparent;
+		}
+	}
+}
+.agt-bottom-marque {
+	padding: 40px 0px;
+	border-top: 1px solid rgba(255, 255, 255, .12);
+	border-bottom: 1px solid rgba(255, 255, 255, .12);
+	.marque-active {
+		display: flow-root;
+	}
+	h3 {
+		display: inline-block;
+		a {
+			line-height: 1;
+			font-size: 120px;
+			white-space: nowrap;
+			position: relative;
+			display: inline-block;
+			letter-spacing: -1.5px;
+			color: rgba(255, 255, 255, .32);
+			font-family: var(--test-sohne-500);
+			@media #{$md,$sm} {
+				font-size: 80px;
+			}
+			@media #{$xs} {
+				font-size: 60px;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+			}
+			&:before {
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 100%;
+				white-space: nowrap;
+				color: #fff;
+				overflow: hidden;
+				content: attr(data-text);
+				position: absolute;
+				font-size: 120px;
+				line-height: 1;
+				-webkit-transition: all 1000ms ease;
+				transition: all 1000ms ease;
+				-webkit-text-fill-color: #fff;
+				@media #{$md,$sm} {
+					font-size: 80px;
+				}
+				@media #{$xs} {
+					font-size: 60px;
+				}
+				@media #{$xxs} {
+					font-size: 60px;
+				}
+			}
+		}
+		&:hover {
+			a {
+				&:before {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.m-arrow {
+		top: -14px;
+		margin: 0px 24px;
+		position: relative;
+		display: inline-block;
+		span {
+			width: 56px;
+			height: 56px;
+			display: flex;
+			font-size: 30px;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--agt-base-color-1);
+			clip-path: polygon( 21.429% 0%,100% 0%,100% 78.571%,89.955% 88.616%,78.571% 100%,0% 100%,0% 21.429%,10.045% 11.384%,21.429% 0% );
+		}
+	}
+}
+.agt-footer-copyright {
+	gap: 5px 30px;
+	padding: 25px 0px;
+	@media #{$xs} {
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center !important;
+	}
+	p {
+		color:  rgba(255, 255, 255, .72);
+	}
+	.copyright-menu {
+		li {
+			margin-left: 60px;
+			@media #{$md,$sm} {
+				margin-left: 40px;
+			}
+			@media #{$xs} {
+				margin: 10px;
+			}
+			a {
+				color: rgba(255, 255, 255, .72);
+				&:hover {
+					color: rgba(255, 255, 255, 1);
+				}
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
