@@ -93,6 +93,9 @@
 					@media #{$xs} {
 						display: none;
 					}
+					&:hover {
+						color: var(--agt-blue-color);
+					}
 				}
 			}
 			.item-tag {
@@ -103,12 +106,26 @@
 					margin-right: 5px;
 					margin-bottom: 4px;
 					background-color: rgba(255, 255, 255, 0.12);
+					&:hover {
+						background-color: var(--agt-blue-color);
+					}
 				}
 			}
 		}
 		.item-img {
+			overflow: hidden;
 			margin-top: 6px;
 			clip-path: polygon( 100% 0%,0% 0%,0% 86.585%,3.631% 92.683%,7.857% 100%,100% 100%,100% 0% );
+			img {
+				transition: all 400ms ease-in-out;
+			}
+		}
+		&:hover {
+			.item-img { 
+				img {
+					transform: scale(102%);
+				}
+			}
 		}
 	}
 	&:nth-child(2),

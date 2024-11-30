@@ -129,11 +129,12 @@
 				display: -webkit-box;
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
-				font-family: var(--test-sohne-300);
+				font-family: var(--test-sohne-400);
 			}
 			.read_more {
 				font-size: 16px;
 				position: relative;
+				font-family: var(--test-sohne-500);
 				&:before {
 					left: 0;
 					bottom: 0;

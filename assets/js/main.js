@@ -119,7 +119,12 @@
 		delay: 10,
 		time: 5000
 	});
-
+// popup-video-activation
+	if($('.popup-video').length) {
+		$('.popup-video').magnificPopup({
+			type: 'iframe'
+		});
+	}
 // wow-activation
 	if($('.wow').length){
 		var wow = new WOW({
@@ -256,6 +261,31 @@
 		tlcta
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 0,  y: "+=250"}, {opacity: 1, y: 0, duration: 1,  immediateRender: false})
+	});
+//Animation
+	const imageAppearContainers = document.querySelectorAll(".ptx-image-appear2");
+	imageAppearContainers.forEach((container) => {
+		const image = container.querySelector(".ptx-img-rvl_2");
+		gsap.timeline({
+			scrollTrigger: {
+				start: "top 90%",
+				trigger: container,
+				toggleActions: "play none none none",
+			}
+		})
+		.set(container, { autoAlpha: 1 })
+		.from(container, {
+			xPercent: 100,
+			duration: 1.5,
+			ease: "power2.out"
+		})
+		.from(image, {
+			xPercent: -100,
+			scale: 1.3,
+			duration: 1.5,
+			delay: -1.5,
+			ease: "power2.out"
+		});
 	});
 
 })(jQuery);
