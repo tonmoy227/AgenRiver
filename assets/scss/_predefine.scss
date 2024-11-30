@@ -249,7 +249,7 @@ select:visited {
 			content: '';
 			z-index: -1;
 			position: absolute;
-			transition: 1s var(--agn-cube-1);
+			transition: .8s var(--agn-cube-1);
 			background-color: var(--agt-blue-color);
 		}
 		&:hover {
@@ -277,6 +277,12 @@ select:visited {
 			right: 0;
 			margin: 0 auto;
 			position: absolute;
+			transition: all 500ms ease-in-out;
+		}
+		&:hover {
+			.stroke-border {
+				opacity: 0;
+			}
 		}
 	}
 }
@@ -306,6 +312,18 @@ select:visited {
 		letter-spacing: -1px;
 		line-height: 1.0833;
 		color: var(--agn-clr-black-2);
+		@media #{$lg} {
+			font-size: 45px;
+		}
+		@media #{$md,$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 35px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
 	}
 }
 // txa-common-css-start

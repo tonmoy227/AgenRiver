@@ -167,5 +167,95 @@
 			
 		});
 	}
+// Animation 2
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 2,
+				start: "top 90%",
+				end: "top 90%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0,  y: "+=30"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+// Play Btn
+	gsap.utils.toArray(' .agt_v_btn').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 2,
+				start: "top 90%",
+				end: "top 90%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0, x:"+50" , y: "+=50"}, {opacity: 1, x:0, y: 0, duration: 1, immediateRender: false})
+	});
+// Animation 2
+	gsap.utils.toArray('.scale_item ').forEach((el, index) => {
+		let tl1 = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1,
+				start: "top 90%",
+				end: "buttom 50%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tl1
+		.set(el, { perspective: 2000 , transformStyle: "preserve-3d" , transformOrigin: "0% 50%" })
+		.from(el , { scaleX: .2  , opacity: 0})
+	})
+// Animation 3
+	gsap.utils.toArray(".agt-text p").forEach(paragraph => {
+		let timeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: paragraph,
+				start: "top 90%",
+				end: "bottom 60%",
+				toggleActions: "play none none none"
+			}
+		});
+		let splitText = new SplitText(paragraph, { type: "lines" });
+		gsap.set(paragraph, { perspective: 400 });
+		timeline.from(splitText.lines, {
+			opacity: 0,
+			rotationX: -80,
+			transformOrigin: "top center -50",
+			force3D: true,
+			duration: 1,
+			delay: 0.5,
+			stagger: 0.1
+		});
+	});
+// Animation 4
+	gsap.utils.toArray(' .top_view_item').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 2,
+				start: "top 90%",
+				end: "top 90%",
+				toggleActions: "play none none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0,  y: "+=250"}, {opacity: 1, y: 0, duration: 1,  immediateRender: false})
+	});
 
 })(jQuery);

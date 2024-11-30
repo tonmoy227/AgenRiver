@@ -30,6 +30,7 @@
 	.item-img {
 		width: 318px;
 		height: 240px;
+		overflow: hidden;
 		position: relative;
 		clip-path: polygon( 100% 0%,0% 0%,0% 100%,87.421% 100%,93.261% 92.113%,100% 83.333%,100% 0% );
 		@media #{$xxs} {
@@ -40,6 +41,7 @@
 			height: 100%;
 			object-fit: cover;
 			mix-blend-mode: luminosity;
+			transition: all 500ms ease-in-out;
 		}
 		&:before {
 			top: 0;
@@ -93,6 +95,13 @@
 			}
 		}
 	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(105%);
+			}
+		}
+	}
 }
 .agt-blog-featured {
 	.agt-blog-item {
@@ -106,6 +115,7 @@
 				height: 100%;
 				object-fit: cover;
 				mix-blend-mode: luminosity;
+				transition: all 500ms ease-in-out;
 			}
 			&:before {
 				top: 0;
@@ -124,6 +134,13 @@
 			.blog_title {
 				font-size: 28px;
 				color: var(--agn-clr-black-2);
+			}
+		}
+		&:hover {
+			.item-img-2 {
+				img {
+					transform: scale(105%);
+				}
 			}
 		}
 	}
