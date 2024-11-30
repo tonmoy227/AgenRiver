@@ -108,7 +108,65 @@
 			}, 700);
 		})
 	});
+// Testimonial
+	if($(".agt-tst-s-active").length) {
+		var swiper3 = new Swiper(".agt-tst-s-active", {
+			speed: 1000,
+			loop: true,
+			spaceBetween: 32,
+			pagination: {
+				el: ".agt-testi-pagination-2",
+				clickable: true,
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					if (number < 10) {
+						return '0' + number;
+					} else {
+						return number;
+					}
+				}
+			},
 
+			navigation: {
+				nextEl: ".agt-testi-next",
+				prevEl: ".agt-testi-prev",
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+			},
+
+		});
+	}
+// Bottom Text Marque
+	$('.marque-active').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: false, 
+		startVisible:true,
+	});
 // Background JS
 	$('[data-background]').each(function() {
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
