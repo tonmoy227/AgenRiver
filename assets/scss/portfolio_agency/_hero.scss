@@ -47,13 +47,32 @@
 .agt-hero-section-2 {
 	z-index: 1;
 	overflow: hidden;
+	&:before {
+		bottom: 0;
+		left: 65px;
+		content: "";
+		height: 37%;
+		width: 1px;
+		position: absolute;
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 15, 20, 0.16)), to(rgba(73, 91, 122, 0)));
+		background: linear-gradient(180deg, rgba(12, 15, 20, 0.16) 0%, rgba(73, 91, 122, 0) 100%);
+		@media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+			display: none;
+		}
+	}
 	.agt-h-side1 {
 		top: 0;
 		right: 0;
+		@media #{$xxs} {
+			display: none;
+		}
 	}
 	.agt-h-side2 {
 		top: 0;
 		left: 0;
+		@media #{$xxs} {
+			display: none;
+		}
 	}
 	.agt-h-color-bg {
 		position: absolute;
@@ -126,6 +145,34 @@
 			}
 		}
 	}
+	.agt-h-social-2 {
+		top: 40%;
+		left: 65px;
+		position: absolute;
+		transform: translate(-50%);
+		@media #{$xxl,$xl} {
+			left: 40px;
+		}
+		@media #{$lg,$md,$sm,$xs} {
+			display: none;
+		}
+		a {
+			width: 44px;
+			height: 44px;
+			opacity: .64;
+			display: flex;
+			margin: 6px 0px;
+			align-items: center;
+			border-radius: 100%;
+			justify-content: center;
+			border: 2px solid #D9D9D9;
+			color: var(--agn-clr-black-2);
+			&:hover {
+				color: var(--agt-base-color-3);
+				border: 2px solid var(--agt-base-color-3);
+			}
+		}
+	}
 }
 .agt-hero-content-2 {
 	z-index: 2;
@@ -133,7 +180,11 @@
 	padding-top: 170px;
 }
 .agt-hero-text-2 {
-	gap: 30px;
+	gap: 20px 30px;
+	@media #{$md,$sm,$xs} {
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
 	.hero_title {
 		font-size: 68px;
 		font-weight: 700;
@@ -141,10 +192,33 @@
 		line-height: 1.06;
 		letter-spacing: -2px;
 		color: var(--agn-clr-black-3);
+		@media #{$lg} {
+			font-size: 55px;
+		}
+		@media #{$md} {
+			font-size: 50px;
+		}
+		@media #{$sm,$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 38px;
+		}
+		@media #{$xxxs} {
+			font-size: 35px;
+		}
 	}
 	.text-desc-btn {
 		max-width: 416px;
 		padding-top: 20px;
+		@media #{$md,$sm,$xs} {
+			padding-top: 0;
+		}
+		.agt-btn-2 {
+			@media #{$xxs} {
+				margin-top: 20px;
+			}
+		}
 	}
 }
 .agt-hero-slider-2 {
@@ -170,6 +244,13 @@
 		height: 90px;
 		margin: 0 auto;
 		position: absolute;
+		@media #{$md,$sm} {
+			width: 50px;
+			height: 50px;
+		}
+		@media #{$xs} {
+			display: none;
+		}
 		a {
 			color: #fff;
 			width: 100%;
@@ -179,6 +260,9 @@
 			align-items: center;
 			border-radius: 100%;
 			justify-content: center;
+			@media #{$md,$sm,$xs} {
+				font-size: 20px;
+			}
 		}
 	}
 	.item-img {
@@ -195,6 +279,9 @@
 		margin: 0 auto;
 		max-width: 440px;
 		position: absolute;
+		@media #{$xs} {
+			bottom: 15px;
+		}
 		&:before {
 			left: 0;
 			right: 0;
@@ -213,6 +300,9 @@
 			width: 100%;
 			height: 85%;
 			position: absolute;
+			@media #{$xs} {
+				display: none;
+			}
 		}
 		.border-left {
 			&:before {
@@ -235,6 +325,9 @@
 			}
 		}
 		.border-right {
+			@media #{$xs} {
+				display: none;
+			}
 			&:before {
 				top: 0;
 				right: 0;
@@ -257,6 +350,9 @@
 		
 		.inner-text {
 			padding-bottom: 18px;
+			@media #{$xxs} {
+				padding-bottom: 0;
+			}
 			&:before {
 				bottom: 8px;
 				left: -5px;
@@ -265,6 +361,9 @@
 				color: #fff;
 				content: '+';
 				position: absolute;
+				@media #{$xs} {
+					display: none;
+				}
 			}
 			&:after {
 				bottom: 8px;
@@ -274,11 +373,17 @@
 				color: #fff;
 				content: '+';
 				position: absolute;
+				@media #{$xs} {
+					display: none;
+				}
 			}
 			.item-cate {
 				display: flex;
 				align-items: center;
 				margin-bottom: 8px;
+				@media #{$xs} {
+					justify-content: center;
+				}
 				.cate-text {
 					font-size: 14px;
 					font-weight: 600;
@@ -290,12 +395,19 @@
 					font-family: var(--saira);
 					background-color: #2DFFA6;
 					color: var(--agn-clr-black-3);
+					@media #{$xxs} {
+						font-size: 12px;
+						padding: 4px 12px;
+					}
 				}
 				.border-top-left {
 					width: 100%;
 					height: 1px;
 					position: relative;
 					background-color: rgba(255, 255, 255, .32);
+					@media #{$xs} {
+						display: none;
+					}
 					&:before,
 					&:after {
 						top: -8px;
@@ -320,6 +432,9 @@
 					width: 100%;
 					position: relative;
 					background-color: rgba(255, 255, 255, .32);
+					@media #{$xs} {
+						display: none;
+					}
 					&:before,
 					&:after {
 						top: -8px;
@@ -347,7 +462,16 @@
 				padding-left: 24px;
 				padding-right: 24px;
 				letter-spacing: -2px;
+				@media #{$xxs} {
+					font-size: 30px;
+				}
+				@media #{$xxxs} {
+					font-size: 25px;
+				}
 			}
 		}
 	}
+}
+.agt-hr2-slider {
+	display: flex;
 }

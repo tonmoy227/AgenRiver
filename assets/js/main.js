@@ -104,7 +104,12 @@
 
 					});
 				}	
-
+				if($(".agt-hr2-slider").length) {
+					var PortSlider = new Swiper(".agt-hr2-slider", {
+						loop: true,
+						speed: 1000,
+					});
+				};
 			}, 700);
 		})
 	});
@@ -165,6 +170,26 @@
 		direction: 'left',
 		duplicated: true,
 		pauseOnHover: false, 
+		startVisible:true,
+	});
+// Bottom Text Marque
+	$('.marque-active-2').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true, 
+		startVisible:true,
+	});
+// Bottom Text Marque
+	$('.marque-active-3').marquee({
+		gap: 0,
+		speed: 60,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true, 
 		startVisible:true,
 	});
 // Background JS
@@ -345,5 +370,176 @@
 			ease: "power2.out"
 		});
 	});
+	//Animation
+	if($('.gray_text').length) {
+		var about_text = $(".gray_text");
+		if(about_text.length == 0) return; gsap.registerPlugin(SplitText); about_text.each(function(index, text) {
+			text.split = new SplitText(text, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			if( $(text).hasClass('gray_text') ){
+				gsap.set(text.split.chars, {
+					opacity: .4,
+				});
+			}
+			text.anim = gsap.to(text.split.chars, {
+				scrollTrigger: {
+					trigger: text,
+					start: "top 60%",
+					end: "top 10%",
+					markers: false,
+					scrub: 1,
+				},
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
 
+		});
+	}
+// Service Slider
+	if ($('.agt-s-slide-active2').length > 0 ) {
+		var slider = new Swiper('.agt-s-slide-active2', {
+			slidesPerView: 5,
+			loop: true,
+			centeredSlides: true,
+			autoplay: {
+				enabled: true,
+				delay: 5000
+			},
+			speed: 1000,
+			navigation: {
+				prevEl: ".ser-button-prev",
+				nextEl: ".ser-button-next",
+			},
+			pagination: {
+				el: ".agt-ser-pagination",
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					if (number < 10) {
+						return '0' + number;
+					} else {
+						return number;
+					}
+				}
+
+			},
+			on: {
+				slideChange: function () {
+					var activeIndex = this.activeIndex;
+					var realIndex = this.slides[activeIndex].getAttribute('data-swiper-slide-index'); 
+					$('.swiper-slide').removeClass('swiper-slide-nth-prev-2 swiper-slide-nth-next-2');
+					$('.swiper-slide[data-swiper-slide-index="'+realIndex+'"]').prev().prev().addClass('swiper-slide-nth-prev-2');
+					$('.swiper-slide[data-swiper-slide-index="'+realIndex+'"]').next().next().addClass('swiper-slide-nth-next-2');
+				},
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 4,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'991': {
+					slidesPerView: 2,
+					centeredSlides: false,
+				},
+				'768': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					centeredSlides: false,
+				},
+				'0': {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+			},
+		});
+	};
+//Animation
+	if(window.innerWidth> 991){
+		let proSroll = gsap.timeline();
+		let otherSections_2 = document.querySelectorAll('.agt_sticky_item')
+		otherSections_2.forEach((section, index, i) => {
+			gsap.set(otherSections_2, {
+				scale: 1 
+			});
+			proSroll.to(section, {
+				scale: index === otherSections_2.length - 1 ? 1 : 0.8,
+				scrollTrigger: {
+					trigger: section,
+					pin: section,
+					scrub: 1,
+					start: "top " + (100 + 10 * i),
+					end: "bottom 100%",
+					ease: "none",
+					endTrigger: '.agt-p-content-2',
+					pinSpacing: false,
+					markers: false,
+				},
+			})
+		});
+	};
+//Animation
+	if (window.matchMedia("(min-width: 768px)").matches) { 
+		gsap.to(".agt-work-content", {
+			scrollTrigger: {
+				trigger: ".agt-work-content",
+				start: "top 0%", 
+				end: "bottom bottom", 
+				pin: ".agt-work-content", 
+				pinSpacing: true,
+				markers: false
+			}
+		});
+		gsap.utils.toArray('.scroll_right_slide_1').forEach((el, index) => { 
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 1,
+					start: "top 0%",
+					end: "top -100%",
+					toggleActions: "play none none reverse",
+					markers: false
+				},
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.to(el,  {opacity: 1, xPercent: -50, duration: 5, rotate: "-30deg" } )
+		})
+		gsap.utils.toArray('.scroll_right_slide_2').forEach((el, index) => { 
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 1,
+					start: "top 0%",
+					end: "top -100%",
+					toggleActions: "play none none reverse",
+					markers: false
+				},
+				
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.to(el,  {
+				opacity: 1,
+				xPercent: 50,
+				duration: 5,
+				rotate: "30deg",
+			})
+		})
+	}	
 })(jQuery);
