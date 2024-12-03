@@ -4,7 +4,8 @@
 	}
 }
 .agt-home-1,
-.agt-home-2 {
+.agt-home-2,
+.agt-home-3 {
 	margin: 0;
 	padding: 0;
 	z-index: 1;
@@ -77,6 +78,15 @@
 	background-color: #fff; 
 	h1,h2,h3,h4,h5,h6 {
 		font-family: var(--saira);
+	}
+}
+.agt-home-3 {
+	font-family: var(--inter);
+}
+.agt-home-3 {
+	background-color: #F7F5EF; 
+	h1,h2,h3,h4,h5,h6 {
+		font-family: var(--archivo);
 	}
 }
 .ul-li ul {
