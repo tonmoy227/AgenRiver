@@ -208,7 +208,28 @@
 					imgUpScroll
 					.set(el, {transformOrigin: 'center center'})
 					.fromTo(el, { y: 300, scale: 0.5  }, { y: 0, scale: 1, duration: 3,})
-				})
+				});
+				gsap.utils.toArray(".agt-h-text p").forEach(paragraph => {
+					let timeline = gsap.timeline({
+						scrollTrigger: {
+							trigger: paragraph,
+							start: "top 90%",
+							end: "bottom 60%",
+							toggleActions: "play none none none"
+						}
+					});
+					let splitText = new SplitText(paragraph, { type: "lines" });
+					gsap.set(paragraph, { perspective: 400 });
+					timeline.from(splitText.lines, {
+						opacity: 0,
+						rotationX: -80,
+						transformOrigin: "top center -50",
+						force3D: true,
+						duration: 1,
+						delay: 0.5,
+						stagger: 0.1
+					});
+				});
 			}, 700);
 		})
 	});
