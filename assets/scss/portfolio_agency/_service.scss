@@ -1,3 +1,24 @@
+.agt-service-section-2 {
+	overflow: hidden;
+	.agt-bg-glow1,
+	.agt-bg-glow2 {
+		width: 70px;
+		height: 315px;
+		position: absolute;
+		filter: blur(300px);
+		background: rgba(251, 153, 90, 1);
+		transform: rotate(50deg);
+	}
+	.agt-bg-glow2 {
+		right: 0;
+		bottom: 0;
+		background: rgba(136, 17, 255, 1);
+	}
+	.agt-bg-glow1 {
+		left: 0;
+		top: 50%;
+	}
+}
 .agt-s-slider-wrap-2 {
 	margin: 0 auto;
 	overflow: hidden;

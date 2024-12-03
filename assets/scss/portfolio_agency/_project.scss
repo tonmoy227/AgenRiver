@@ -85,6 +85,9 @@
 				@media #{$xxs} { 
 					font-size: 50px;
 				}
+				&:hover {
+					color: var(--agt-base-color-3);
+				}
 			}
 			span {
 				width: 72px;

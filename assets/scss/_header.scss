@@ -278,6 +278,10 @@
 				@media #{$lg,$md,$sm,$xs} {
 					font-size: 14px;
 				}
+				&:hover {
+					color: #fff;
+					background-color: var(--agt-base-color-3);
+				}
 			}
 			@media #{$xxs} {
 				display: none;

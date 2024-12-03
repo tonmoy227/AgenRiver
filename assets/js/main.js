@@ -47,6 +47,51 @@
 			});
 		});
 	}
+	if($('.agt-split-2').length) {
+		var txtSplit = $('.agt-split-2');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "words",
+				wordsClass: "split-word"
+			});
+		});
+	}
+	if($('.agt-sub-tilte').length) {
+		var agtsub = $(".agt-sub-tilte");
+
+		if(agtsub.length == 0) return; gsap.registerPlugin(SplitText); agtsub.each(function(index, el) {
+			
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			
+			if( $(el).hasClass('agt-sub-anim') ){
+				gsap.set(el.split.chars, {
+					opacity: 0,
+					x: "-7",
+				});
+			}
+			
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+					end: "top 60%",
+					markers: false,
+					scrub: 1,
+				},
+
+				x: "0",
+				y: "0",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+			
+		});
+	}
+
 // windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -108,8 +153,62 @@
 					var PortSlider = new Swiper(".agt-hr2-slider", {
 						loop: true,
 						speed: 1000,
+						effect: "fade",
+						autoplay: {
+							delay: 4000,
+						},
 					});
 				};
+				if($(".agt_hero_title").length) {
+					var AGTTitleAni = $(".agt_hero_title");
+					if(AGTTitleAni.length == 0) return; gsap.registerPlugin(SplitText); AGTTitleAni.each(function(index, el) {
+
+						el.split = new SplitText(el, { 
+							type: "lines,words,chars",
+							linesClass: "split-line"
+						});
+
+						gsap.set(el, { perspective: 400 });
+
+						if( $(el).hasClass('agt_hero_title') ){
+							gsap.set(el.split.chars, {
+								x: 100,
+								opacity: 0,
+							});
+						}
+						el.anim = gsap.to(el.split.chars, {
+							scrollTrigger: {
+								trigger: el,
+								start: "top 90%",
+								toggleActions: "play reverse play reverse",
+								markers: false,
+							},
+							x: 0,
+
+							opacity: 1,
+							duration: 1,
+							stagger: .03,
+							delay: .1,
+							ease: "power3.inOut",
+						});
+
+					});
+				}
+				gsap.utils.toArray('.scroll_up_scale_img').forEach((el, index) => { 
+					let imgUpScroll = gsap.timeline({
+						scrollTrigger: {
+							trigger: ".agt-hero-content-2",
+							scrub: 5,
+							start: "top -1%",
+							end: "top 100%",
+							markers: false,
+						}
+					})
+
+					imgUpScroll
+					.set(el, {transformOrigin: 'center center'})
+					.fromTo(el, { y: 300, scale: 0.5  }, { y: 0, scale: 1, duration: 3,})
+				})
 			}, 700);
 		})
 	});
@@ -221,9 +320,9 @@
 	};
 	// Animation 1
 	if($('.agt-sec-title').length) {
-		var txasplit2 = $(".agt-sec-title");
+		var txtheading = $(".agt-sec-title");
 
-		if(txasplit2.length == 0) return; gsap.registerPlugin(SplitText); txasplit2.each(function(index, el) {
+		if(txtheading.length == 0) return; gsap.registerPlugin(SplitText); txtheading.each(function(index, el) {
 			
 			el.split = new SplitText(el, { 
 				type: "lines,words,chars",
@@ -236,7 +335,6 @@
 					x: "-7",
 				});
 			}
-			
 			el.anim = gsap.to(el.split.chars, {
 				scrollTrigger: {
 					trigger: el,
@@ -255,6 +353,41 @@
 			
 		});
 	}
+	if($('.tx-split-text').length) {
+		var st = jQuery(".tx-split-text");
+		if(st.length == 0) return;
+		gsap.registerPlugin(SplitText);
+		st.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+			gsap.set(el, { perspective: 400 });
+			if( jQuery(el).hasClass('split-in-right') ){
+				gsap.set(el.split.words, {
+					opacity: 0,
+					rotationX: -90,
+					ease: "power2.out",
+				});
+			}
+			el.anim = gsap.to(el.split.words, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+				},
+				x: "0",
+				y: "0",
+				rotateX: "0",
+				rotationX: "0",
+				color: 'inherit',
+				webkitTextStroke: "0px white",
+				scale: 1,
+				opacity: 1,
+				duration: 0.8, 
+				stagger: 0.25,
+			});
+		});
+	};
 // Animation 2
 	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
@@ -271,6 +404,40 @@
 		tlcta
 		.set(el, {transformOrigin: 'center center'})
 		.from(el, { opacity: 0,  y: "+=30"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+// Animation  Footer Logo
+	gsap.utils.toArray(' .top_view_logo').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 2,
+				start: "top 100%",
+				end: "top -100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0, scale: .5,  y: "+=150"}, {opacity: 1, y: 0, scale: 1, duration: 1, immediateRender: false})
+	});
+	jQuery(window).on('load', function(){
+		const boxes = gsap.utils.toArray('.txt_item_active');
+		boxes.forEach(svg => {
+			gsap.to(svg, {
+				scrollTrigger: {
+					trigger: svg,
+					start: "top 100%",
+					end: "bottom bottom",
+					toggleClass: "active",
+					duration: 3,
+					delay:1,
+					toggleActions: "play play play reverse",
+					once: true,
+				}
+			});
+		});
 	});
 // Play Btn
 	gsap.utils.toArray(' .agt_v_btn').forEach((el, index) => { 
@@ -492,7 +659,7 @@
 		});
 	};
 //Animation
-	if (window.matchMedia("(min-width: 768px)").matches) { 
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		gsap.to(".agt-work-content", {
 			scrollTrigger: {
 				trigger: ".agt-work-content",
@@ -503,7 +670,7 @@
 				markers: false
 			}
 		});
-		gsap.utils.toArray('.scroll_right_slide_1').forEach((el, index) => { 
+		gsap.utils.toArray('.wt-item-1').forEach((el, index) => { 
 			let tlcta = gsap.timeline({
 				scrollTrigger: {
 					trigger: el,
@@ -517,9 +684,14 @@
 
 			tlcta
 			.set(el, {transformOrigin: 'center center'})
-			.to(el,  {opacity: 1, xPercent: -50, duration: 5, rotate: "-30deg" } )
+			.to(el,  {
+				opacity: 1,
+				xPercent: -50,
+				duration: 5,
+				rotate: "-30deg" 
+			} )
 		})
-		gsap.utils.toArray('.scroll_right_slide_2').forEach((el, index) => { 
+		gsap.utils.toArray('.wt-item-2').forEach((el, index) => { 
 			let tlcta = gsap.timeline({
 				scrollTrigger: {
 					trigger: el,
@@ -539,6 +711,27 @@
 				xPercent: 50,
 				duration: 5,
 				rotate: "30deg",
+			})
+		})
+		gsap.utils.toArray('.agt_text_up').forEach((el, index) => { 
+			let tlcta = gsap.timeline({
+				scrollTrigger: {
+					trigger: el,
+					scrub: 1,
+					start: "top 0%",
+					end: "bottom -100%",
+					toggleActions: "play none none reverse",
+					markers: false
+				},
+				
+			})
+
+			tlcta
+			.set(el, {transformOrigin: 'center center'})
+			.to(el,  {
+				y: -100,
+				zIndex: 4,
+				scale: 1.05,
 			})
 		})
 	}	

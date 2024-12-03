@@ -1,6 +1,9 @@
+.agt-work-section {
+	overflow: hidden;
+}
 .agt-work-text {
 	left: 0;
-	top: 50%;
+	top: 55%;
 	right: 0;
 	margin: 0 auto;
 	max-width: 632px;
@@ -10,6 +13,23 @@
 		font-size: 56px;
 		font-weight: 700;
 		color: var(--agn-clr-black-1);
+		@media #{$lg} {
+			font-size: 45px;
+		}
+		@media #{$md,$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 35px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		position: static;
+		margin-bottom: 60px;
+		transform: translateY(0);
 	}
 }
 .agt-work-content {
@@ -20,6 +40,9 @@
 	gap: 23px;
 	z-index: 1;
 	position: relative;
+	@media #{$md,$sm,$xs} { 
+		flex-wrap: wrap;
+	}
 	.agt-wr-item {
 		overflow: hidden;
 		border-radius: 28px;

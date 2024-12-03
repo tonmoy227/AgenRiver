@@ -312,18 +312,59 @@ select:visited {
 }
 .agt-btn-2 {
 	a  {
+		z-index: 1;
 		font-size: 16px;
 		font-weight: 600;
-		padding: 14px 27px;
+		overflow: hidden;
+		position: relative;
 		border-radius: 100px;
+		padding: 15px 27px 13px;
 		font-family: var(--saira);
 		color: var(--agt-base-color-3);
 		border: 2px solid var(--agt-base-color-3);
 		i {
 			margin-left: 4px;
+			transition: all 500ms ease-in-out;
 		}
 		@media #{$xs} {
 			padding: 10px 20px;
+		}
+		&:before {
+			top: 15px;
+			left: -10px;
+			color: #fff;
+			opacity: 0;
+			font-weight: 900;
+			content: "\f054";
+			position: absolute;
+			transition: all 500ms ease-in-out;
+			font-family: "Font Awesome 6 Free";
+		}
+		&:after {
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 0%;
+			content: '';
+			height: 100%;
+			position: absolute;
+			border-radius: 100px;
+			transition: 700ms var(--agn-cube-1);
+			background-color: var(--agt-base-color-3);
+		}
+		&:hover {
+			padding: 15px 14px 13px 40px;
+			color: #fff;
+			&:before {
+				opacity: 1;
+				left: 25px;
+			}
+			&:after {
+				width: 100%;
+			}
+			i {
+				transform: translateX(50px);
+			}
 		}
 	}
 }
@@ -370,8 +411,26 @@ select:visited {
 .agt-sec-title-2 {
 	.subtitle {
 		margin-bottom: 40px;
+		position: relative;
 		padding-bottom: 16px;
-		border-bottom: 1px solid #D9D9D9;
+		&:before {
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 0%;
+			content: '';
+			height: 1px;
+			margin: 0 auto;
+			position: absolute;
+			background-color: #D9D9D9;
+			transition: all 1000ms ease-in-out;
+		}
+		&.active {
+			&:before {
+				width: 100%;
+				transition-delay: 1000ms;
+			}
+		}
 		.sub-text {
 			font-size: 16px;
 			font-weight: 500;
