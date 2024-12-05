@@ -67,6 +67,11 @@
             padding: 0 14px;
             text-transform: capitalize;
             margin-bottom: 24px;
+            &.ver_2 {
+                color: #fff;
+                font-weight: 500;
+                background:  #65DC8D;
+            }
         }
 
         .blog-title {
@@ -81,6 +86,11 @@
 
             &:hover {
                 color: var(--agt-base-color-3);
+            }
+            &.ver_2 {
+                &:hover {
+                    color: var(--agt-base-color-5);
+                }
             }
         }
         
@@ -159,5 +169,11 @@
             }
         }
     }
-    
+}
+.agt-blog-top-content {
+    gap: 20px 30px;
+    flex-wrap: wrap;
+    .agt-section-title-3 {
+        max-width: 545px;
+    }
 }

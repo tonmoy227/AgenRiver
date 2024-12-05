@@ -149,8 +149,8 @@
 
 					});
 				}	
-				if($(".agt-hr2-slider").length) {
-					var PortSlider = new Swiper(".agt-hr2-slider", {
+				if($(".agt-h-slider-3").length) {
+					var PortSlider = new Swiper(".agt-h-slider-3", {
 						loop: true,
 						speed: 1000,
 						effect: "fade",
@@ -159,6 +159,7 @@
 						},
 					});
 				};
+				
 				if($(".agt_hero_title").length) {
 					var AGTTitleAni = $(".agt_hero_title");
 					if(AGTTitleAni.length == 0) return; gsap.registerPlugin(SplitText); AGTTitleAni.each(function(index, el) {
@@ -655,6 +656,25 @@
 			},
 		});
 	};
+	// Project Slider
+	if ($('.agt-pr-slider').length > 0 ) {
+		var swiper2 = new Swiper(".agt-pr-slider", {
+			slidesPerView: 1,
+			loop: true,
+			spaceBetween: 32,
+			roundLengths: true,
+			centeredSlides: true,
+			speed: 1000,
+			navigation: {
+				nextEl: ".agt-pr-next",
+				prevEl: ".agt-pr-prev",
+			},
+			pagination: {
+				el: ".agt-pr-pagination-2 ",
+				type: "progressbar",
+			},
+		});
+	};
 //Animation
 	if(window.innerWidth> 991){
 		let proSroll = gsap.timeline();
@@ -756,4 +776,100 @@
 			})
 		})
 	}	
+	if ($('.agt-service-section-4').length > 0 ) {
+		let SerAnim;
+		const screenWidth = window.screen.width;
+		if (screenWidth > 990) {
+			const SerArea = document.querySelector(".agt-service-section-4");
+			const SerPin = document.querySelector(".agt-sr-card-sticky");
+			const SerOne = document.querySelector(".agt-sr-card-item-4.card_n_2");
+			const SerTwo = document.querySelector(".agt-sr-card-item-4.card_n_3");
+			const SerThree = document.querySelector(".agt-sr-card-item-4.card_n_4");
+			const SerZoom = document.querySelector(".agt-sr-card-item-4.has-main-card");
+			const SerZoomImage = document.querySelector(".agt-sr-card-item-4.has-main-card .item-img-wrap");
+			const SerZoomContent = document.querySelector(".activity_hero-item-outter-wrapper.is-hero-main .item-text-wrap");
+			const TextContent = document.querySelectorAll(".activity_cut-out");
+			const ItemCard = document.querySelector(".agt-sr-card-item-4.has-main-card .agt-s-card-item");
+			const SideItem = document.querySelector(".agt-sr-text-wrap-4");
+			let easingValue = "Power1.easeOut";
+			SerAnim = gsap.timeline({
+				scrollTrigger: {
+					trigger: SerArea,
+					start: "top 0%",
+					end: "top -100%",
+					scrub: true,
+					pin: true,
+				},
+			});
+			SerAnim.to(SerThree, {
+				rotate: "360",
+				duration: 0.5,
+				ease: easingValue
+			}).to(SideItem, {
+				y: "-100%",
+				opacity: "0",
+				duration: 0.4,
+				ease: easingValue
+			}, "<").to(SerPin, {
+				width: "100%",
+				duration: 0.5,
+				ease: easingValue
+			}, "<+.1").to(SerZoom, {
+				width: "103vw",
+				duration: 0.5,
+				ease: easingValue
+			}, ">").to(SerPin, {
+				top: "-1rem",
+				paddingTop: "0",
+				duration: 0.5,
+				ease: easingValue
+			}, "<").to(SerZoomImage, {
+				height: "103vh",
+				duration: 0.5,
+				ease: easingValue
+			}, "<").to(SerZoomContent, {
+				scale: "3",
+				y: "-65vh",
+				duration: 0.5,
+				ease: easingValue
+			}, "<").to(TextContent, {
+				scale: "1.5",
+				duration: 0.5,
+				ease: easingValue
+			}, "<").to(ItemCard, {
+				borderWidth: "1.5",
+				duration: 0.5,
+				ease: easingValue
+			}, "<").to(SerTwo, {
+				rotate: "360",
+				duration: 0.5,
+				ease: easingValue
+			}, "0.08").to(SerOne, {
+				rotate: "360",
+				duration: 0.5,
+				ease: easingValue
+			}, "<+0.08").to([SerThree, SerTwo, SerOne], {
+				css: {
+					zIndex: -1
+				}
+			}, "0.1");
+		};
+	}
+	gsap.utils.toArray('.agt-part-content-3').forEach((el, index) => { 
+		let Sponsor = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".agt-part-content-3",
+				scrub: 6,
+				start: "top 20%",
+				end: "bottom -20%",
+				toggleActions: "play none none reverse", 
+				markers: false,
+			}
+		})
+
+		Sponsor
+		.set(el, {transformOrigin: 'top bottom'})
+		.fromTo(el, { x: 0  }, { x: -1200 , duration: 30, immediateRender: false})
+	});
+
 })(jQuery);
