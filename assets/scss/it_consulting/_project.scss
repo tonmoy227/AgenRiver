@@ -55,6 +55,9 @@
 	}
 	.agt-btn-3 a {
 		background-color: #fff;
+		&:hover {
+			background-color: var(--agt-base-color-5);
+		}
 	}
 }
 .agt-pr-slider {
@@ -67,28 +70,47 @@
 	overflow: hidden;
 	border-radius: 12px;
 	.item-img {
+		z-index: 1;
 		overflow: hidden;
 		position: relative;
 		&:before {
 			bottom: 0;
 			width: 100%;
+			z-index: 1;
 			content: '';
 			height: 275px;
 			position: absolute;
 			background: linear-gradient(180deg, rgba(30, 30, 30, 0) 0%, #1E1E1E 100%);
 		}
+		img {
+			transform: scale(1.2);
+			transition: all 1500ms ease-in-out;
+		}
 	}
 	.item-text {
 		z-index: 1;
 		left: 60px;
+		opacity: 0;
 		bottom: 60px;
 		max-width: 505px;
 		position: absolute;
+		overflow: hidden;
+		visibility: hidden;
+		transition: all 700ms ease-in-out;
+		.split-line {
+			overflow: hidden;
+			transform: translateY(100px);
+			transition: all 800ms ease-in-out;
+		}
 		@media #{$xxs} {
 			left: 30px;
 			bottom: 30px;
 		}
 		span {
+			opacity: 0;
+			visibility: visible;
+			transform: translateX(50px);
+			transition: all 700ms ease-in-out;
 			a {
 				font-size: 14px;
 				font-weight: 600;
@@ -132,6 +154,11 @@
 		font-weight: 500;
 		letter-spacing: 4px;
 		color: var(--agn-clr-black-9);
+		transition: all 500ms ease-in-out;
+		&:hover {
+			opacity: 1;
+			color: var(--agt-base-color-5);
+		}
 	}
 	.agt-pr-pagination-2 {
 		&.swiper-pagination-progressbar {
@@ -141,6 +168,27 @@
 			background-color: #E4E4E4;
 			.swiper-pagination-progressbar-fill  {
 				background-color: var(--agn-clr-black-9);
+			}
+		}
+	}
+}
+.swiper-slide-active {
+	.agt-pr-item-3 {
+		.item-img {
+			img {
+				transform: scale(1);
+			}
+		}
+		.item-text {
+			opacity: 1;
+			visibility: visible;
+			span {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0px);
+			}
+			.split-line {
+				transform: translateY(0px);
 			}
 		}
 	}

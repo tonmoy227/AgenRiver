@@ -391,6 +391,18 @@ select:visited {
 		background-color: var(--agt-base-color-6);
 		svg {
 			margin-left: 5px;
+			path {
+				transition: all 300ms ease-in-out;
+			}
+		}
+		&:hover {
+			color: #fff;
+			background-color: var(--agt-base-color-5);
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
 		}
 	}
 }

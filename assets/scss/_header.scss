@@ -453,7 +453,21 @@
 					white-space: nowrap;
 					background-color: #fff;
 					color: var(--agt-base-color-4);
-					img {
+					svg {
+						path {
+							transition: all 500ms ease-in-out;
+						}
+					}
+					&:hover {
+						color: #fff;
+						background-color: var(--agt-base-color-5);
+						svg {
+							path {
+								fill: #fff;
+							}
+						}
+					}
+					svg {
 						margin-left: 5px;
 					}
 					@media #{$md,$sm,$xs} {
