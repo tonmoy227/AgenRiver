@@ -7396,6 +7396,11 @@ select:visited {
   -webkit-transition-delay: 800ms;
           transition-delay: 800ms;
 }
+.agt-counter-video .agt-cv-video {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .agt-counter-video {
     max-width: 1000px;

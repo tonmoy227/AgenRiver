@@ -73,6 +73,11 @@
 			transition-delay: 800ms;
 		}
 	}
+	.agt-cv-video {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+	}
 	@media #{$xxl} {
 		max-width: 1000px;
 	}
