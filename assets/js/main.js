@@ -864,16 +864,16 @@
 				scrollTrigger: {
 					trigger: el,
 					scrub: 2,
-					start: "top 0%",
-					end: "top -90%",
-					toggleActions: "play none none reverse",
+					start: "top 20%",
+					end: "top -100",
+					toggleActions: "play reverse none reverse",
 					markers: false,
 				}
 			})
 
 			tlcta
-			.set(el, {transformOrigin: 'center center'})
-			.from(el, { height: 0}, {height: 100, duration: 1,  immediateRender: false})
+			.set(el, {transformOrigin: 'top top'})
+			.fromTo(el, { scaleY: 0}, {scaleY: 1, duration: 1,  immediateRender: false})
 		});
 	};
 //Animation
