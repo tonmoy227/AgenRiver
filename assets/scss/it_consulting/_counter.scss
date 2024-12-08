@@ -64,6 +64,7 @@
 }
 .agt-counter-video {
 	height: 740px;
+	overflow: hidden;
 	max-width: 1200px;
 	&.active {
 		.video-play-btn {
@@ -77,6 +78,9 @@
 		bottom: 0;
 		left: 0;
 		position: absolute;
+		img {
+			mix-blend-mode: luminosity;
+		}
 	}
 	@media #{$xxl} {
 		max-width: 1000px;

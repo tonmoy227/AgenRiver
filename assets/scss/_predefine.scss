@@ -526,6 +526,18 @@ select:visited {
 		line-height: 1.156;
 		letter-spacing: -1px;
 		color: var(--agn-clr-black-9);
+		@media #{$lg} {
+			font-size: 40px;
+		}
+		@media #{$md,$sm} {
+			font-size: 35px;
+		}
+		@media #{$xs} {
+			font-size: 32px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
 	}
 	p {
 		padding-top: 15px;
