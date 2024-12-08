@@ -56,5 +56,14 @@
 		align-items: center;
 		justify-content: center;
 		border: 1px solid #1E1E1E66;
+		cursor: pointer;
+		img {
+			transition: all 500ms ease-in-out;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 }

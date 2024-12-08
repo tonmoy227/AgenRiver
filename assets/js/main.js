@@ -859,23 +859,23 @@
 				},
 			})
 		});
-		gsap.utils.toArray(' .agt-pr-shape').forEach((el, index) => { 
-			let tlcta = gsap.timeline({
-				scrollTrigger: {
-					trigger: el,
-					scrub: 2,
-					start: "top 20%",
-					end: "top -100",
-					toggleActions: "play reverse none reverse",
-					markers: false,
-				}
-			})
-
-			tlcta
-			.set(el, {transformOrigin: 'top top'})
-			.fromTo(el, { scaleY: 0}, {scaleY: 1, duration: 1,  immediateRender: false})
-		});
 	};
+	gsap.utils.toArray(' .draw-shape-img').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 3,
+				start: "top 20%",
+				end: "bottom 0",
+				toggleActions: "play reverse none reverse",
+				markers: false,
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'top top'})
+		.fromTo(el, { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)"}, {clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 1})
+	});
 //Animation
 	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		gsap.to(".agt-work-content", {

@@ -31,6 +31,7 @@
 		width: 64px;
 		height: 64px;
 		margin-bottom: 92px;
+		transition: all 500ms ease-in-out;
 		@media #{$lg,$md,$sm,$xs,$xxs} {
 			margin-bottom: 60px;
 		}
@@ -43,6 +44,11 @@
 			letter-spacing: -1px;
 			padding-bottom: 20px;
 			color: var(--agn-clr-black-9);
+		}
+	}
+	&:hover {
+		.item-icon {
+			transform: scale(-1) rotate(180deg);
 		}
 	}
 }
