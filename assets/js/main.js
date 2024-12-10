@@ -423,6 +423,43 @@
 		})
 
 	}
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		const ServiceCardItem = gsap.utils.toArray(".agt-sr-item-5");
+		const SerItems = gsap.utils.toArray(".sticky-item");
+		const animateCard = (card, wrapper, index) => {
+			gsap.to(card, {
+				transformOrigin: "top center",
+				duration: 1,
+				ease: "power2.out",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: `top ${100 + 20 * index}`, 
+					end: "bottom 55%",
+					endTrigger: ".agt-sr-item-area",
+					scrub: 1,
+					pin: wrapper,
+					pinSpacing: false,
+					markers: false,
+				},
+			});
+		};
+		ServiceCardItem.forEach((wrapper, index) => animateCard(SerItems[index], wrapper, index));
+	}
+	if (window.matchMedia("(min-width: 768px)").matches) { 
+		var Hero_pin = document.querySelectorAll(".agt-sr-pinned-area")
+		Hero_pin.forEach((item) => {
+			gsap.to(item, {
+				scrollTrigger: {
+					trigger: item,
+					markers: true,
+					pin: true,
+					pinSpacing: false,
+					start: "top 0%",
+					end: "bottom +=200",
+				},
+			});
+		});
+	}
 // Bottom Text Marque
 	$('.marque-active').marquee({
 		gap: 0,
@@ -986,5 +1023,9 @@
 		.set(el, {transformOrigin: 'top bottom'})
 		.fromTo(el, { x: 0  }, { x: -1200 , duration: 30, immediateRender: false})
 	});
-
+	var ltn__active_item = $('.agt-ab-ft-item')
+	ltn__active_item.mouseover(function() {
+		ltn__active_item.removeClass('active');
+		$(this).addClass('active');
+	});
 })(jQuery);

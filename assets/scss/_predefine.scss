@@ -5,7 +5,8 @@
 }
 .agt-home-1,
 .agt-home-2,
-.agt-home-3 {
+.agt-home-3,
+.agt-home-4 {
 	margin: 0;
 	padding: 0;
 	z-index: 1;
@@ -87,6 +88,18 @@
 	background-color: #F7F5EF; 
 	h1,h2,h3,h4,h5,h6 {
 		font-family: var(--archivo);
+	}
+}
+.agt-home-4 {
+	letter-spacing: -1px;
+	background-color: #fff;
+	font-family: var(--inter);
+	color: var(--agt-blk-clr);
+	.container {
+		max-width: 1345px;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-family: var(--inter);
 	}
 }
 .ul-li ul {
@@ -406,6 +419,17 @@ select:visited {
 		}
 	}
 }
+.agt-btn-4 {
+	a {
+		font-size: 16px;
+		font-weight: 600;
+		padding: 14px 30px;
+		border-radius: 4px;
+		letter-spacing: -1px;
+		color: var(--agn-clr-white-1);
+		background-color: var(--agt-base-color-8);
+	}
+}
 .agt-section-title-1 {
 	.subtitle {
 		font-size: 16px;
@@ -547,6 +571,85 @@ select:visited {
 		max-width: 540px;
 		.subtitle { 
 			justify-content: center;
+		}
+	}
+}
+.agt-section-title-4 {
+	.subtitle {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.5;
+		padding-left: 51px;
+		margin-bottom: 16px;
+		position: relative;
+		display: inline-block;
+		color: var(--agt-blue-color-3);
+		&:before,
+		&:after {
+			top: 11px;
+			width: 32px;
+			height: 1px;
+			content: '';
+			position: absolute;
+			background-color: var(--agt-blue-color-3);
+		}
+		&:before {
+			left: 12px;
+		}
+		&:after {
+			right: 12px;
+			display: none;
+		}
+		.sub_icon_1 {
+			left: 0;
+			top: -2px;
+			position: absolute;
+			path {
+				fill: var(--agt-blue-color-3);
+			}
+		}
+		.sub_icon_2 {
+			right: 0;
+			top: -2px;
+			display: none;
+			position: absolute;
+			path {
+				fill: var(--agt-blue-color-3);
+			}
+		}
+	}
+	.sec_title {
+		font-size: 52px;
+		font-weight: 600;
+		line-height: 1.15;
+		color: var(--agt-blk-clr-2);
+		@media #{$lg} {
+			font-size: 45px;
+		}
+		@media #{$md,$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 35px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+	}
+	p {
+		padding-top: 22px;
+	}
+	&.text-center { 
+		margin: 0 auto;
+		max-width: 750px;
+		.subtitle {
+			padding-right: 51px;
+			&:after {
+				display: block;
+			}
+			.sub_icon_2 {
+				display: block;
+			}
 		}
 	}
 }
