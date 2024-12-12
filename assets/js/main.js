@@ -236,11 +236,28 @@
 						fadeEffect: {
 							crossFade: true
 						},
+						// autoplay: {
+						// 	delay: 4000,
+						// },
+						pagination: {
+							el: ".agt-pagination-h3",
+							clickable: true,
+						},
+					});
+				};
+				if($(".agt-hs4-slider").length) {
+					var AGTh3 = new Swiper(".agt-hs4-slider", {
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
 						autoplay: {
 							delay: 4000,
 						},
 						pagination: {
-							el: ".agt-pagination-h3",
+							el: ".agt-pagination-h4",
 							clickable: true,
 						},
 					});
@@ -423,47 +440,96 @@
 		})
 
 	}
-	if (window.matchMedia("(min-width: 768px)").matches) {
+	if($(".agt-ft-s-active").length) {
+		const swiper = new Swiper(".agt-ft-s-active" , {
+			speed: 500,
+			spaceBetween: 0,
+			loop: true,
+			// autoplay:  {
+			// 	delay: 5000,
+			// },
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1024: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+				1600: {
+					slidesPerView: 3,
+				},
+				1800: {
+					slidesPerView: 3,
+				},
+			},
+		})
+
+	}
+	if (window.matchMedia("(min-width: 1200px)").matches) {
 		const ServiceCardItem = gsap.utils.toArray(".agt-sr-item-5");
-		const SerItems = gsap.utils.toArray(".sticky-item");
 		const animateCard = (card, wrapper, index) => {
 			gsap.to(card, {
 				transformOrigin: "top center",
-				duration: 1,
-				ease: "power2.out",
+				duration: 2,
+				scrub: 1.5,
+				ease: "power1.out",
 				scrollTrigger: {
 					trigger: wrapper,
-					start: `top ${100 + 20 * index}`, 
-					end: "bottom 55%",
+					start: `top ${270 + 20 * index}`, 
+					end: "bottom 77%",
 					endTrigger: ".agt-sr-item-area",
-					scrub: 1,
 					pin: wrapper,
 					pinSpacing: false,
 					markers: false,
 				},
 			});
 		};
-		ServiceCardItem.forEach((wrapper, index) => animateCard(SerItems[index], wrapper, index));
+		ServiceCardItem.forEach((wrapper, index) => animateCard([index], wrapper, index));
 	}
-	if (window.matchMedia("(min-width: 768px)").matches) { 
-		var Hero_pin = document.querySelectorAll(".agt-sr-pinned-area")
-		Hero_pin.forEach((item) => {
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var TitlePin = document.querySelectorAll(".agt-sr-pinned-area")
+		TitlePin.forEach((item) => {
 			gsap.to(item, {
+				transformOrigin: "top center",
+				duration: 2,
+				scrub: 1.5,
+				ease: "power1.out",
 				scrollTrigger: {
 					trigger: item,
-					markers: true,
+					markers: false,
 					pin: true,
 					pinSpacing: false,
-					start: "top 0%",
-					end: "bottom +=200",
+					start: "top -5%",
+					end: "top -150%",
 				},
 			});
 		});
 	}
+	$(document).on('click', '.agt-fq-accordion .accordion-item', function(){
+		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+	});
+	$(document).on('click', '.agt-fq-accordion .accordion-item', function(){
+		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+	});
 // Bottom Text Marque
 	$('.marque-active').marquee({
 		gap: 0,
-		speed: 60,
+		speed: 40,
 		delayBeforeStart: 0,
 		direction: 'left',
 		duplicated: true,
@@ -473,7 +539,7 @@
 // Bottom Text Marque
 	$('.marque-active-2').marquee({
 		gap: 0,
-		speed: 60,
+		speed: 40,
 		delayBeforeStart: 0,
 		direction: 'right',
 		duplicated: true,
@@ -483,7 +549,7 @@
 // Bottom Text Marque
 	$('.marque-active-3').marquee({
 		gap: 0,
-		speed: 60,
+		speed: 40,
 		delayBeforeStart: 0,
 		direction: 'left',
 		duplicated: true,
@@ -624,7 +690,7 @@
 	gsap.utils.toArray(' .top_view_logo').forEach((el, index) => { 
 		let tlcta = gsap.timeline({
 			scrollTrigger: {
-				trigger: el,
+				trigger: ".agt-foooter-section-2",
 				scrub: 2,
 				start: "top 100%",
 				end: "top -100%",

@@ -13,7 +13,8 @@
 		justify-content: center;
 	}
 }
-.agt-s-item-3 {
+.agt-s-item-3,
+.agt-ft-item-4 {
 	max-width: 418px;
 	padding: 60px 48px 64px;
 	border-left: 1px solid rgba(64, 64, 70, .32);
@@ -52,6 +53,7 @@
 		}
 	}
 }
+// Service Section 4
 .agt-service-section-4 {
 	height: 100vh;
 	position: relative;
@@ -175,5 +177,51 @@
 		@media #{$lg,$md,$sm,$xs} {
 			transform: rotate(0) translateX(0) translateY(0);
 		}
+	}
+}
+//  Feature Section Start Up Agency
+.agt-feature-section-4 {
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 1920px;
+	@media #{$xs,$xxs} {
+		padding: 80px 15px;
+	}
+}
+.agt-ft-item-4 {
+	max-width: 100%;
+	border-right: none !important;
+	border-top: 1px solid rgba(64, 64, 70, 0.32);
+	@media #{$md,$sm} {
+		margin: 0;
+		border: none;
+		border-top: 1px solid rgba(64, 64, 70, 0.32);
+		border-left: 1px solid rgba(64, 64, 70, 0.32);
+	}
+	@media #{$xs,$xxs} {
+		margin: 0;
+		border: 1px solid rgba(64, 64, 70, 0.32) !important;
+	}
+	.item-icon {
+		margin-bottom: 105px;
+		@media #{$lg,$md,$sm,$xs} {
+			margin-bottom: 80px;
+		}
+	}
+	.item-text h3 {
+		font-size: 26px;
+		font-weight: 600;
+	}
+}
+.agt-ft-s-active {
+	display: flex;
+	max-width: 1250px;
+	margin-right: -96px;
+	border-bottom: 1px solid rgba(64, 64, 70, 0.32);
+	@media #{$lg,$md,$sm,$xs} {
+		margin-right: 0;
+	}
+	@media #{$xs,$xxs} {
+		border-bottom: none;
 	}
 }

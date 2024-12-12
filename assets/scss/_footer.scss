@@ -327,6 +327,13 @@
 			filter: grayscale(1);
 		}
 	}
+	&.ver_2 {
+		h2 {
+			i {
+				background-color: var(--agt-base-color-8);
+			}
+		}
+	}
 }
 .agt-footer-widget-2 {
 	gap: 30px;
@@ -385,6 +392,11 @@
 			position: absolute;
 			background-color: var(--agt-base-color-3);
 		}
+		&.ver_2 {
+			&:after {
+				background-color: var(--agt-base-color-8);
+			}
+		}
 	}
 }
 .agt-fm-widget-2 {
@@ -409,6 +421,15 @@
 				padding-left: 18px;
 				&:before {
 					width: 13px;
+				}
+			}
+		}
+	}
+	&.ver_2 {
+		li {
+			a {
+				&:before {
+					background-color: var(--agt-base-color-8);
 				}
 			}
 		}
@@ -448,6 +469,15 @@
 		}
 		p {
 			color: #fff;
+		}
+	}
+	&.ver_2 {
+		.info-item {
+			.item-icon {
+				i {
+					color: var(--agt-base-color-8);
+				}
+			}
 		}
 	}
 }

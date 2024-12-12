@@ -601,6 +601,10 @@
 					@media #{$xxl,$xl,$lg} {
 						padding: 12px 18px;
 					}
+					&:hover {
+						color:  var(--agt-blk-clr-2);;
+						background-color: var(--agt-base-color-7);
+					}
 				}
 			}
 			.header-search {
