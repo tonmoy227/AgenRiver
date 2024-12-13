@@ -35,6 +35,14 @@
 			display: none;
 		}
 	}
+	.agt_sec_left_line,
+	.agt_sec_right_line {
+		svg {
+			path {
+				stroke-dashoffset: 2500;
+			}
+		}
+	}
 }
 .agt-sr-item-5 {
 	padding: 64px;

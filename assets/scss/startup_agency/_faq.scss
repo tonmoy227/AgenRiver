@@ -9,6 +9,8 @@
 	.agt-fq-title-text {
 		max-width: 421px;
 		.agt-section-title-4 {
+			top: 80px;
+			position: sticky;
 			.sec_title {
 				font-size: 45px;
 				@media #{$lg} {

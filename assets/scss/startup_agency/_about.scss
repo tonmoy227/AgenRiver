@@ -6,13 +6,16 @@
 	}
 }
 .agt-ab-text-4 {
+	overflow: hidden;
 	max-width: 532px;
 }
 .agt-ab-img-4 {
-	overflow: hidden;
-	img {
-		border-radius: 12px;
-	} 
+	.item-img {
+		overflow: hidden;
+		img {
+			border-radius: 12px;
+		} 
+	}
 }
 .agt-about-feature-4 {
 	max-width: 644px;

@@ -422,14 +422,44 @@ select:visited {
 }
 .agt-btn-4 {
 	a {
+		z-index: 1;
 		font-size: 16px;
 		font-weight: 600;
 		padding: 14px 30px;
 		border-radius: 4px;
 		letter-spacing: -1px;
+		position: relative;
 		color: var(--agn-clr-white-1);
 		background-color: var(--agt-base-color-8);
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 0%;
+			height: 100%;
+			content: '';
+			position: absolute;
+			border-radius: 4px;
+			transition: 700ms var(--agn-cube-1);
+			background-color: var(--agt-base-color-7);
+		}
+		&:hover {
+			color: var(--agt-blck-color-2);
+			&:before {
+				width: 100%;
+			}
+		}
 	}
+}
+@keyframes agt-spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
 .agt-section-title-1 {
 	.subtitle {
@@ -605,6 +635,7 @@ select:visited {
 			left: 0;
 			top: -2px;
 			position: absolute;
+			animation: agt-spin 2000ms infinite;
 			path {
 				fill: var(--agt-blue-color-3);
 			}
@@ -614,6 +645,7 @@ select:visited {
 			top: -2px;
 			display: none;
 			position: absolute;
+			animation: agt-spin 2200ms infinite;
 			path {
 				fill: var(--agt-blue-color-3);
 			}
