@@ -38,6 +38,34 @@
 			});
 		}
 	});
+	function TXTheaderSticky() {
+		var $window = $(window);
+		var lastScrollTop = 0;
+		var $header = $('.txa_sticky_header');
+		var headerHeight = $header.outerHeight() + 30;
+
+		$window.scroll(function () {
+			var windowTop = $window.scrollTop();
+
+			if (windowTop >= headerHeight) {
+				$header.addClass('txa_sticky');
+			} else {
+				$header.removeClass('txa_sticky');
+				$header.removeClass('txa_sticky_show');
+			}
+
+			if ($header.hasClass('txa_sticky')) {
+				if (windowTop < lastScrollTop) {
+					$header.addClass('txa_sticky_show');
+				} else {
+					$header.removeClass('txa_sticky_show');
+				}
+			}
+
+			lastScrollTop = windowTop;
+		});
+	}
+	TXTheaderSticky();
 	if($('.agt-split-1').length) {
 		var txtSplit = $('.agt-split-1');
 		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {

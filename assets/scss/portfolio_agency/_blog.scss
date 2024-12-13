@@ -1,4 +1,4 @@
-.agn-blog-1 {
+.agnt-blog-1 {
     &-sec-title {
         max-width: 650px;
     }
@@ -95,7 +95,7 @@
 
         .main-img {
             height: 100%;
-            width: 300px;
+            width: 0px;
             border-radius: 12px;
             transition: all .5s var(--agn-cube-1);
             height: 448px;
@@ -163,7 +163,13 @@
                 }
             }
         }
+        &.has_img {
+            .main-img {
+                width: 300px;
+            }
+        }
     }
+
 }
 .agt-blog-top-content {
     gap: 20px 30px;
