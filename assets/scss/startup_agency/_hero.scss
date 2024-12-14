@@ -117,7 +117,7 @@
 	.item-men-img {
 		z-index: 2;
 		right: 200px;
-		bottom: -30px;
+		bottom: 0px;
 		position: absolute;
 		transform: translateY(100%);
 		transition: 1500ms var(--agn-cube-1);
@@ -135,6 +135,9 @@
 	.brand_shape {
 		right: 0;
 		bottom: 0;
+		opacity: 0;
+		transform: translateX(100%);
+		transition: 2000ms var(--agn-cube-1);
 	}
 	.agt-hs4-item-content {
 		padding-top: 78px;
@@ -272,6 +275,11 @@
 			img {
 				transform: scale(1) translate3d(0px, 0px, 0px) rotate(0deg);
 			}
+		}
+		.brand_shape {
+			opacity: 1;
+			transform: translateX(0%);
+			transition-delay: 2s;
 		}
 		.item-men-img {
 			transition-delay: 800ms;

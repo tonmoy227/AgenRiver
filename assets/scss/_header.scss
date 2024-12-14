@@ -683,7 +683,7 @@
 					&.dropdown {
 						&:after {
 							top: 4px;
-							right: 3px;
+							right: -1px;
 							color: var(--agt-base-color-7);
 						}
 						.dropdown-menu {

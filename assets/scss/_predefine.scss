@@ -6,7 +6,8 @@
 .agt-home-1,
 .agt-home-2,
 .agt-home-3,
-.agt-home-4 {
+.agt-home-4,
+.agt-home-5 {
 	margin: 0;
 	padding: 0;
 	z-index: 1;
@@ -718,4 +719,19 @@ select:visited {
 
 @for $i from 1 through 40 {
 	.pr-#{5 * $i}{padding-right: 5px *$i;}
+}
+
+
+////////////////////////// After 10 Home Page I start Common css from here///////////////////
+.agt-home-5 {
+	background-color: #F6EFE6;
+	font-family: var(--inter);
+	color: var(--agt-blk-clr);
+	.container {
+		max-width: 1345px;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 400;
+		font-family: var(--field);
+	}
 }

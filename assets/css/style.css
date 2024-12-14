@@ -15,6 +15,13 @@ Font load
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@font-face {
+  font-family: "Field Demo";
+  src: url("../fonts/Fontspring-DEMO-fields-regular-iF663b470a2e746.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --agt-base-color-1: #BAF6BE;
   --agt-base-color-2: #00AF78;
@@ -38,6 +45,7 @@ Font load
   --saira: "Saira", sans-serif;
   --archivo: "Archivo", sans-serif;
   --inter: "Inter", sans-serif;
+  --field: "Field Demo";
 }
 
 :root {
@@ -94,7 +102,8 @@ a, span {
 .agt-home-1,
 .agt-home-2,
 .agt-home-3,
-.agt-home-4 {
+.agt-home-4,
+.agt-home-5 {
   margin: 0;
   padding: 0;
   z-index: 1;
@@ -112,19 +121,22 @@ a, span {
 .agt-home-1 .container,
 .agt-home-2 .container,
 .agt-home-3 .container,
-.agt-home-4 .container {
+.agt-home-4 .container,
+.agt-home-5 .container {
   max-width: 1338px;
 }
 .agt-home-1 .row,
 .agt-home-2 .row,
 .agt-home-3 .row,
-.agt-home-4 .row {
+.agt-home-4 .row,
+.agt-home-5 .row {
   --bs-gutter-x: 32px;
 }
 .agt-home-1 .mfp-iframe-holder .mfp-close,
 .agt-home-2 .mfp-iframe-holder .mfp-close,
 .agt-home-3 .mfp-iframe-holder .mfp-close,
-.agt-home-4 .mfp-iframe-holder .mfp-close {
+.agt-home-4 .mfp-iframe-holder .mfp-close,
+.agt-home-5 .mfp-iframe-holder .mfp-close {
   right: 0;
   padding: 0;
   top: -40px;
@@ -137,7 +149,8 @@ a, span {
 .agt-home-1 button.mfp-close,
 .agt-home-2 button.mfp-close,
 .agt-home-3 button.mfp-close,
-.agt-home-4 button.mfp-close {
+.agt-home-4 button.mfp-close,
+.agt-home-5 button.mfp-close {
   right: 0;
   padding: 0;
   color: #fff;
@@ -2223,6 +2236,19 @@ select:visited {
   padding-right: 200px;
 }
 
+.agt-home-5 {
+  background-color: #F6EFE6;
+  font-family: var(--inter);
+  color: var(--agt-blk-clr);
+}
+.agt-home-5 .container {
+  max-width: 1345px;
+}
+.agt-home-5 h1, .agt-home-5 h2, .agt-home-5 h3, .agt-home-5 h4, .agt-home-5 h5, .agt-home-5 h6 {
+  font-weight: 400;
+  font-family: var(--field);
+}
+
 /* 
 	preloader-css-start
 */
@@ -3121,7 +3147,7 @@ select:visited {
 }
 .agt-header-section.header_type_four .agt-header-content .main-navigation li.dropdown:after {
   top: 4px;
-  right: 3px;
+  right: -1px;
   color: var(--agt-base-color-7);
 }
 .agt-header-section.header_type_four .agt-header-content .main-navigation li.dropdown .dropdown-menu {
@@ -9263,7 +9289,7 @@ select:visited {
 .agt-hs4-item .item-men-img {
   z-index: 2;
   right: 200px;
-  bottom: -30px;
+  bottom: 0px;
   position: absolute;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -9289,6 +9315,11 @@ select:visited {
 .agt-hs4-item .brand_shape {
   right: 0;
   bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 2000ms var(--agn-cube-1);
+  transition: 2000ms var(--agn-cube-1);
 }
 .agt-hs4-item .agt-hs4-item-content {
   padding-top: 78px;
@@ -9449,6 +9480,13 @@ select:visited {
 .swiper-slide-active .agt-hs4-item .item-bg img {
   -webkit-transform: scale(1) translate3d(0px, 0px, 0px) rotate(0deg);
           transform: scale(1) translate3d(0px, 0px, 0px) rotate(0deg);
+}
+.swiper-slide-active .agt-hs4-item .brand_shape {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 .swiper-slide-active .agt-hs4-item .item-men-img {
   -webkit-transition-delay: 800ms;
@@ -9934,6 +9972,12 @@ select:visited {
 .agt-wc-cl-list li.agt-arrow i {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.agt-wc-cl-list li.agt-arrow:hover i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .agt-wc-cl-list p span {
   display: block;
@@ -9987,6 +10031,12 @@ select:visited {
 .agt-wc-img-text-4 .item-img .inner-img {
   overflow: hidden;
   border-radius: 8px 8px 0px 8px;
+}
+.agt-wc-img-text-4 .item-img .inner-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .agt-wc-img-text-4 .item-text {
   max-width: 432px;

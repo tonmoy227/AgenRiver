@@ -699,6 +699,22 @@ gsap.utils.toArray(' .top_view').forEach((el, index) => {
 	.set(el, {transformOrigin: 'center center'})
 	.from(el, { opacity: 0,  y: "+=30"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
 });
+gsap.utils.toArray(' .top_view_2').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 3,
+			start: "top 0%",
+			end: "top 60%",
+			toggleActions: "play none none reverse",
+			markers: false,
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'center center'})
+	.fromTo(el, { opacity: 1,  y: "-=0"}, {opacity: 1, y: 200, duration: 1, immediateRender: false})
+});
 gsap.utils.toArray(' .rotate_view').forEach((el, index) => { 
 	let tlcta = gsap.timeline({
 		scrollTrigger: {
