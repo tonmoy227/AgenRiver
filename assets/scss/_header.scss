@@ -807,6 +807,24 @@
 			}
 		}
 	}
+	&.header_type_five {
+		.agt-header-content {
+			.main-navigation {
+				li {
+					margin: 0px 16px;
+					a {
+						font-size: 16px;
+						color: var(--agt-trv);
+					}
+					&:after {
+						top: 3px;
+						right: 0;
+						color: var(--agt-trv);
+					}
+				}
+			}
+		}
+	}
 	&.txa_sticky_header {
 		position: fixed;
 		width: 100%;

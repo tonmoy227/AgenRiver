@@ -453,14 +453,14 @@ select:visited {
 	}
 }
 @keyframes agt-spin {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
 }
 .agt-section-title-1 {
 	.subtitle {
@@ -726,12 +726,35 @@ select:visited {
 .agt-home-5 {
 	background-color: #F6EFE6;
 	font-family: var(--inter);
-	color: var(--agt-blk-clr);
+	color: var(--agt-trv-bd);
 	.container {
 		max-width: 1345px;
 	}
 	h1,h2,h3,h4,h5,h6 {
 		font-weight: 400;
+		color: var(--agt-trv);
 		font-family: var(--field);
+	}
+}
+.agt-btn-5 {
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		span {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
+			padding: 16px 30px;
+			border-radius: 100px;
+			background-color: var(--agt-base-color-9);
+		}
+		i {
+			padding: 20px;
+			font-size: 16px;
+			border-radius: 100%;
+			color: var(--agt-base-color-9);
+			background-color: var(--agt-trv);
+		}
 	}
 }
