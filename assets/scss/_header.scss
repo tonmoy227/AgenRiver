@@ -808,10 +808,31 @@
 		}
 	}
 	&.header_type_five {
+		padding-top: 28px;
+		@media #{$md,$sm,$xs} {
+			padding-top: 15px;
+		}
 		.agt-header-content {
+			.navigation-cta {
+				gap: 20px;
+				@media #{$lg,$md,$sm,$xs} {
+					gap: 10px;
+				}
+			}
+			.brand-logo {
+				@media #{$lg,$md,$sm,$xs} {
+					max-width: 180px;
+				}
+			}
 			.main-navigation {
+				@media #{$md,$sm,$xs} {
+					display: none;
+				}
 				li {
 					margin: 0px 16px;
+					@media #{$lg} {
+						margin: 0px 10px;
+					}
 					a {
 						font-size: 16px;
 						color: var(--agt-trv);
@@ -821,6 +842,26 @@
 						right: 0;
 						color: var(--agt-trv);
 					}
+				}
+			}
+			.offcanvas-trigger {
+				@extend%ofcanvas-trigger;
+				height: 27px;
+				width: 27px;
+				background-color: transparent;
+				@media #{$md,$sm,$xs} {
+					display: none;
+				}
+			}
+			.agt-btn-5 {
+				@media #{$sm,$xs} {
+					display: none;
+				}
+				span {
+					padding: 9px 30px;
+				}
+				i {
+					padding: 14px;
 				}
 			}
 		}

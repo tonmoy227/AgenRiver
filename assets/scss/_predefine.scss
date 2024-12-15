@@ -743,18 +743,52 @@ select:visited {
 		justify-content: center;
 		span {
 			color: #fff;
+			z-index: 1;
 			font-size: 16px;
 			font-weight: 600;
 			padding: 16px 30px;
+			position: relative;
+			transition: all .3s;
 			border-radius: 100px;
+			white-space: nowrap;
 			background-color: var(--agt-base-color-9);
 		}
 		i {
 			padding: 20px;
 			font-size: 16px;
 			border-radius: 100%;
+			transition: all .3s;
 			color: var(--agt-base-color-9);
 			background-color: var(--agt-trv);
+		}
+		>*:nth-child(1) {
+			transform: scale3d(0.5, 0.5, 1) rotate(-45deg);
+			margin-inline-end: -40px;
+		}
+
+		>*:nth-child(2) {
+			transform: scale3d(1, 1, 1);
+		}
+
+		>*:nth-child(3) {
+			transform: scale3d(1, 1, 1) rotate(-45deg);
+			margin-inline-start: 0;
+
+		}
+		&:hover {
+			>*:nth-child(1) {
+				transform: scale3d(1, 1, 1) rotate(-45deg);
+				margin-inline-end: 0;
+			}
+
+			>*:nth-child(2) {
+				transform: scale3d(1, 1, 1);
+			}
+
+			>*:nth-child(3) {
+				transform: scale3d(0.5, 0.5, 1) rotate(-45deg);
+				margin-inline-start: -40px;
+			}
 		}
 	}
 }
