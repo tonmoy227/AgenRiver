@@ -763,7 +763,7 @@ select:visited {
 		}
 		>*:nth-child(1) {
 			transform: scale3d(0.5, 0.5, 1) rotate(-45deg);
-			margin-inline-end: -40px;
+			margin-inline-end: -45px;
 		}
 
 		>*:nth-child(2) {
@@ -787,8 +787,30 @@ select:visited {
 
 			>*:nth-child(3) {
 				transform: scale3d(0.5, 0.5, 1) rotate(-45deg);
-				margin-inline-start: -40px;
+				margin-inline-start: -45px;
 			}
 		}
+	}
+}
+.agt-section-title-5 {
+	.sec_title {
+		line-height: 1;
+		font-size: 64px;
+		@media #{$lg} {
+			font-size: 50px;
+		}
+		@media #{$md,$sm} {
+			font-size: 55px;
+		}
+		@media #{$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 35px;
+		}
+	}
+	&.text-center {
+		margin: 0 auto;
+		max-width: 880px;
 	}
 }

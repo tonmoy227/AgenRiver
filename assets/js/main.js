@@ -396,7 +396,6 @@ if($(".agt-tst-s-active").length) {
 				}
 			}
 		},
-
 		navigation: {
 			nextEl: ".agt-testi-next",
 			prevEl: ".agt-testi-prev",
@@ -507,8 +506,55 @@ if($(".agt-ft-s-active").length) {
 			},
 		},
 	})
-
 }
+
+if($(".agt-cnt-slide").length) {
+	const swiper = new Swiper(".agt-cnt-slide" , {
+		speed: 500,
+		spaceBetween: 32,
+		loop: true,
+		autoplay:  {
+			delay: 5000,
+		},
+		navigation: {
+			nextEl: ".agt-cnt-next",
+			prevEl: ".agt-cnt-prev",
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			480: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 5,
+			},
+			1024: {
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+			1400: {
+				slidesPerView: 7,
+			},
+			1600: {
+				slidesPerView: 7,
+			},
+			1800: {
+				slidesPerView: 7,
+			},
+		},
+	})
+}
+
 if (window.matchMedia("(min-width: 1200px)").matches) {
 	const ServiceCardItem = gsap.utils.toArray(".agt-sr-item-5");
 	const animateCard = (card, wrapper, index) => {
