@@ -2,6 +2,9 @@
 	z-index: 1;
 	overflow: hidden;
 	padding-top: 200px;
+	@media #{$xxs} {
+		padding-top: 150px;
+	}
 	.agt-hero-mark {
 		right: 0;
 		bottom: -50px;
