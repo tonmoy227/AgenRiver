@@ -426,6 +426,45 @@ if($(".agt-tst-s-active").length) {
 
 	});
 }
+if($(".agt-testi-slider-5").length) {
+	var swiper4 = new Swiper(".agt-testi-slider-5", {
+		speed: 1000,
+		loop: true,
+		spaceBetween: 32,
+		pagination: {
+			el: ".agt-tst5-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".agt-tst5-next",
+			prevEl: ".agt-tst5-prev",
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 1,
+			},
+			1199: {
+				slidesPerView: 1,
+			},
+			1200: {
+				slidesPerView: 2,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+		},
+
+	});
+}
 	// Testimonial Slide 4
 if($(".agt-tst-slider-3").length) {
 	const swiper = new Swiper(".agt-tst-slider-3" , {

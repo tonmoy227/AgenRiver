@@ -5,8 +5,15 @@ Font load
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face {
 	font-family: 'Field Demo';
-	src: url('../fonts/Fontspring-DEMO-fields-regular-iF663b470a2e746.otf') format('otf');
+	src: url('../fonts/Fontspring-DEMO-fieldsdisplay-regular-iF663b470905700.otf') format('otf');
 	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Field Demo';
+	src: url('../fonts/Fontspring-DEMO-fieldsdisplay-medium-iF663b4708d09c8.otf') format('otf');
+	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }

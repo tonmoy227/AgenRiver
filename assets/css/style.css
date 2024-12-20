@@ -17,8 +17,15 @@ Font load
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @font-face {
   font-family: "Field Demo";
-  src: url("../fonts/Fontspring-DEMO-fields-regular-iF663b470a2e746.otf") format("otf");
+  src: url("../fonts/Fontspring-DEMO-fieldsdisplay-regular-iF663b470905700.otf") format("otf");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Field Demo";
+  src: url("../fonts/Fontspring-DEMO-fieldsdisplay-medium-iF663b4708d09c8.otf") format("otf");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -11343,6 +11350,214 @@ select:visited {
 .agt-package-item:hover .item-img img {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+/*---------------------------------------------------- */
+/*Testimonial area*/
+/*----------------------------------------------------*/
+.agt-testimonial-section-5 {
+  overflow: hidden;
+}
+.agt-testimonial-section-5 .agt-section-title-5 {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.agt-testi-slider-5 {
+  margin-left: -378px;
+  margin-right: -378px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .agt-testi-slider-5 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.agt-tst-item-5 {
+  padding: 24px;
+  gap: 30px 48px;
+  max-width: 870px;
+  border-radius: 16px;
+  background: radial-gradient(100% 390.96% at 100% 100%, #FFFFFF 0%, #F6EFE6 50%, #FFFFFF 100%);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
+  .agt-tst-item-5 {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .agt-tst-item-5 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.agt-tst-item-5 .item-img {
+  width: 240px;
+  height: 392px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.agt-tst-item-5 .item-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 480px) {
+  .agt-tst-item-5 .item-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.agt-tst-item-5 .item-text {
+  gap: 20px;
+  max-width: 502px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 576px) and (max-width: 767px) {
+  .agt-tst-item-5 .item-text {
+    max-width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .agt-tst-item-5 .item-text {
+    max-width: 100%;
+  }
+}
+.agt-tst-item-5 .item-text ul li {
+  font-size: 14px;
+}
+.agt-tst-item-5 .item-text p {
+  font-size: 23px;
+  padding-top: 15px;
+}
+@media (max-width: 480px) {
+  .agt-tst-item-5 .item-text p {
+    font-size: 20px;
+  }
+}
+.agt-tst-item-5 .item-text .item-author h3 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  font-family: var(--inter);
+}
+.agt-tst-item-5 .item-text .item-author span {
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .agt-testimonial-content-5 .agt-trv-slide-nav {
+    display: none;
+  }
+}
+
+.agt-tst5-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  margin: 0px 8px !important;
+  background-color: var(--agt-trv);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+/*---------------------------------------------------- */
+/*Faq area*/
+/*----------------------------------------------------*/
+.agt-faq-section-5 {
+  padding-top: 305px;
+}
+.agt-faq-section-5 .agt-section-title-5 {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.agt-fq-accordion5 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 870px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px), (max-width: 480px) {
+  .agt-fq-accordion5 {
+    max-width: 100%;
+  }
+}
+.agt-fq-accordion5 .accordion-item,
+.agt-fq-accordion5 .accordion-button:not(.collapsed),
+.agt-fq-accordion5 .accordion-button {
+  background-color: transparent;
+}
+.agt-fq-accordion5 .accordion-item {
+  border: none;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 480px) {
+  .agt-fq-accordion5 .accordion-item {
+    padding: 23px 15px 23px 25px;
+  }
+}
+.agt-fq-accordion5 .accordion-button {
+  padding: 0;
+  border: none;
+  font-size: 25px;
+  position: relative;
+  color: var(--agt-trv);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.agt-fq-accordion5 .accordion-button span {
+  max-width: 85%;
+  display: inline-block;
+}
+.agt-fq-accordion5 .accordion-button:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.agt-fq-accordion5 .accordion-body {
+  font-size: 18px;
+  line-height: 30px;
+  line-height: 1.667;
+  padding: 14px 0px 0px;
+}
+.agt-fq-accordion5 .accordion-button::after {
+  top: 5px;
+  right: 0;
+  opacity: 0.7;
+  font-size: 16px;
+  content: "\f067";
+  font-weight: 900;
+  position: absolute;
+  border-radius: 100%;
+  background-image: none;
+  color: var(--agt-base-color-9);
+  font-family: "Font Awesome 6 free";
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.agt-fq-accordion5 .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--agt-trv);
+}
+.agt-fq-accordion5 .accordion-button:not(.collapsed):before {
+  opacity: 1;
+  color: var(--agt-base-color-9);
+}
+.agt-fq-accordion5 .accordion-button:not(.collapsed):after {
+  opacity: 1;
+  content: "\f068";
+  color: var(--agt-base-color-9);
 }
 
 /*---------------------------------------------------- */
