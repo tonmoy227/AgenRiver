@@ -43,6 +43,9 @@
 }
 .agt-hero-text-5 {
 	padding-bottom: 1088px;
+	&.ver_2 {
+		padding-bottom: 1020px;
+	}
 	@media #{$md,$sm,$xs} {
 		padding-bottom: 750px;
 	}
@@ -57,6 +60,9 @@
 		line-height: 1.05;
 		max-width: 825px;
 		font-size: 90px;
+		&.ver_2 {
+			max-width: 1110px;
+		}
 		@media #{$md,$sm} {
 			font-size: 70px;
 		}
