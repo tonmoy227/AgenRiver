@@ -11823,6 +11823,9 @@ select:visited {
   background-color: #fff;
   color: var(--agt-base-color-9);
 }
+.agt-blog-item-5 .item-text .blog_title {
+  font-size: 24px;
+}
 
 /*---------------------------------------------------- */
 /*Footer area*/
