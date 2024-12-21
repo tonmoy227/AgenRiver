@@ -1,4 +1,11 @@
 .agt-package-section {
+	.line_shape_2 {
+		left: 0;
+		top: -110px;
+		@media #{$xs} {
+			display: none;
+		} 
+	}
 	.agt-section-title-5 {
 		max-width: 760px;
 	}

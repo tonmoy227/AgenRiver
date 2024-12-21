@@ -280,6 +280,21 @@
 				margin-left: 0;
 			}
 		}
+		&.ver_2 {
+			li {
+				margin-left: 40px;
+				a {
+					color: var(--agt-trv);
+					transition: all 300ms ease-in-out;
+					&:hover {
+						color: var(--agt-base-color-9);
+					}
+				}
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
 	}
 }
 .agt-foooter-section-2 {
@@ -493,4 +508,116 @@
 }
 .agt-fc-2 {
 	border-top: 1px solid rgba(255, 255, 255, .16);
+}
+.agn-footer-5-widget-single .widget-title.ver_2 {
+	opacity: .64;
+	font-weight: 500;
+	color: var(--agt-trv);
+	font-family: var(--inter);
+}
+.agn-footer-5-menu.ver_2 li a {
+	&:after {
+		background-color: var(--agt-base-color-9);
+	}
+	&:hover {
+		color: var(--agt-base-color-9);
+	}
+}
+.agn-footer-5-phone-btn .icon.ver_2 {
+	color: #fff;
+	background-color: var(--agt-base-color-9);
+}
+.agn-footer-5-join-btn.ver_2 {
+	i {
+		transform: rotate(-45deg);
+	}
+}
+.agn-footer-5-join-btn.ver_2:hover,
+.agn-footer-5-join-btn.ver_2:hover b {
+	color: var(--agt-base-color-9);
+}
+.agn-footer-5-social.ver_2 {
+	a {
+		&:hover {
+			color: var(--agt-base-color-9);
+		}
+	}
+}
+.agt-footer-instagram {
+	margin-left: 8px;
+	@media #{$xxs} {
+		margin-left: 0;
+	}
+}
+.agt-ft-ins-item {
+	.item-img {
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.agt-ft-slug {
+	left: 0;
+	top: 50%;
+	right: 0;
+	z-index: 2;
+	text-align: center;
+	position: absolute;
+	transform: translateY(-50%);
+	@media #{$xs} {
+		position: static;
+		transform: translateY(0);
+	}
+	h3 {
+		display: inline-block;
+		a {
+			font-size: 32px;
+			padding: 10px 20px;
+			border-radius: 8px;
+			display: inline-block;
+			background-color: #fff;
+			transition: all 300ms ease-in-out;
+			@media #{$xxs} {
+				width: 100%;
+				font-size: 24px;
+			}
+			&:hover {
+				color: #fff;
+				background-color: var(--agt-base-color-9);
+			}
+		}
+	}
+}
+.agt-footer-copyright {
+	&.ver_2 {
+		padding: 32px 0px;
+		p {
+			font-size: 16px;
+			color: rgba(30, 47, 34, 0.64);
+			a {
+				font-weight: 500;
+				color: rgba(30, 47, 34, 1);
+			}
+		}
+	}
+}
+.agt-back-top-5 {
+	right: 32px;
+	bottom: 25px;
+	cursor: pointer;
+	position: absolute;
+	svg {
+		rect {
+			transition: all 300ms ease-in-out;
+		}
+		&:hover {
+			rect {
+				fill: var(--agt-trv);
+			}
+		}
+	}
 }

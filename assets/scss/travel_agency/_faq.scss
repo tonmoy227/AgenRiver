@@ -1,5 +1,20 @@
 .agt-faq-section-5 {
+	z-index: 1;
 	padding-top: 305px;
+	.line_shape_2 {
+		left: 0;
+		top: 170px;
+		z-index: -1;
+	}
+	.fq-shape-1 {
+		right: 0;
+		top: 20px;
+	}
+	.fq-shape-2 {
+		left: 0;
+		bottom: 0;
+		filter: blur(5px);
+	}
 	.agt-section-title-5 {
 		margin: 0 auto;
 		max-width: 700px;

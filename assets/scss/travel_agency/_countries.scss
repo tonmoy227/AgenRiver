@@ -11,15 +11,25 @@
 		opacity: 0;
 	}
 }
+.line_shape_area {
+	.line_shape {
+		right: 0;
+		top: -55px;
+		position: absolute;
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
 .agt-countries-section {
 	overflow: hidden;
 }
 .agt-cnt-slide {
 	margin-right: -118px;
-    margin-left: -118px;
-    @media #{$xs} {
-    	margin: 0;
-    }
+	margin-left: -118px;
+	@media #{$xs} {
+		margin: 0;
+	}
 }
 .agt-cnt-item {
 	margin: 0 auto;
@@ -98,5 +108,11 @@
 	}
 	.agt-trv-prev {
 		left: 25px;
+	}
+	&.ver_2 {
+		div {
+			top: 50%;
+			z-index: 3;
+		}
 	}
 }
