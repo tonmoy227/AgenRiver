@@ -723,7 +723,8 @@ select:visited {
 
 
 ////////////////////////// After 10 Home Page I start Common css from here///////////////////
-.agt-home-5 {
+.agt-home-5,
+.agt-home-6 {
 	background-color: #F6EFE6;
 	font-family: var(--inter);
 	color: var(--agt-trv-bd);
@@ -734,6 +735,17 @@ select:visited {
 		font-weight: 400;
 		color: var(--agt-trv);
 		font-family: var(--field);
+	}
+}
+.agt-home-6 {
+	font-size: 20px;
+	line-height: 1.5;
+	background-color: transparent;
+	color: rgba(51, 51, 51, .72);
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 400;
+		color: var(--agn-clr-black-1);
+		font-family: var(--ethereal);
 	}
 }
 .agt-btn-5 {
@@ -791,6 +803,18 @@ select:visited {
 			}
 		}
 	}
+	&.white_ver {
+		a {
+			span {
+				color: var(--agn-clr-black-2);
+				background-color: var(--agn-clr-white-1);
+			}
+			i {
+				color: var(--agn-clr-black-2);
+				background-color: var(--agn-clr-white-1);
+			}
+		}
+	}
 }
 .agt-section-title-5 {
 	.sec_title {
@@ -812,5 +836,21 @@ select:visited {
 	&.text-center {
 		margin: 0 auto;
 		max-width: 880px;
+	}
+}
+.agt-section-title-6 {
+	.sec_title {
+		font-size: 45px;
+		line-height: 1.09;
+		letter-spacing: 1px;
+	}
+	p {
+		padding-top: 22px;
+	}
+	&.text-center {
+		opacity: .72;
+		margin: 0 auto;
+		max-width: 680px;
+		color: var(--agt-blck-color-3);
 	}
 }
