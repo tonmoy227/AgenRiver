@@ -5,6 +5,11 @@
 		@media #{$xs} {
 			display: none;
 		} 
+		#paper-plane {
+			path {
+				transform: translateY(-13px);
+			}
+		}
 	}
 	.agt-section-title-5 {
 		max-width: 760px;

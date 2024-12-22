@@ -1,19 +1,56 @@
+@keyframes animCloud {
+    from {
+        -webkit-transform: translateX(100%)
+    }
+    to {
+        -webkit-transform: translateX(-100%)
+    }
+}
 .agt-faq-section-5 {
 	z-index: 1;
+	overflow: hidden;
 	padding-top: 305px;
 	.line_shape_2 {
 		left: 0;
 		top: 170px;
 		z-index: -1;
+		#paper-planes {
+			path {
+				transform: translateY(-13px);
+			}
+		}
 	}
 	.fq-shape-1 {
 		right: 0;
 		top: 20px;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
 	}
 	.fq-shape-2 {
 		left: 0;
 		bottom: 0;
 		filter: blur(5px);
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+	.fq-cloud-1 {
+		top: 0;
+		left: 0;
+		animation: animCloud 20s infinite linear;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
+	}
+	.fq-cloud-2 {
+		top: 0;
+		right: 0;
+		z-index: -1;
+		animation: animCloud 30s infinite linear;
+		@media #{$xs,$xxs} {
+			display: none;
+		}
 	}
 	.agt-section-title-5 {
 		margin: 0 auto;
