@@ -815,6 +815,18 @@ select:visited {
 			}
 		}
 	}
+	&.ver_2 {
+		a {
+			span {
+				background-color: var(--agt-base-color-10);
+			}
+			i {
+				background-color: transparent;
+				color: var(--agt-base-color-10);
+				border: 2px solid var(--agt-base-color-10);
+			}
+		}
+	}
 }
 .agt-section-title-5 {
 	.sec_title {
@@ -843,14 +855,13 @@ select:visited {
 		font-size: 45px;
 		line-height: 1.09;
 		letter-spacing: 1px;
+		color: var(--agt-blk-clr-3);
 	}
 	p {
 		padding-top: 22px;
 	}
 	&.text-center {
-		opacity: .72;
 		margin: 0 auto;
 		max-width: 680px;
-		color: var(--agt-blck-color-3);
 	}
 }

@@ -690,6 +690,93 @@ if($(".agt-ft-ins-slider").length) {
 		},
 	})
 }
+if($(".agt-sp-client-slider-6").length) {
+	const swiper = new Swiper(".agt-sp-client-slider-6" , {
+		speed: 500,
+		spaceBetween: 50,
+		loop: true,
+		pagination: {
+			el: ".agt-sp-pagination-6",
+			clickable: true,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+			},
+			480: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1024: {
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+			1400: {
+				slidesPerView: 6,
+			},
+			1600: {
+				slidesPerView: 7,
+			},
+			1800: {
+				slidesPerView: 7,
+			},
+		},
+	})
+}
+if($(".agt-project-slider-6").length) {
+	const swiper = new Swiper(".agt-project-slider-6" , {
+		speed: 1000,
+		loop: true,
+		spaceBetween: 32,
+		centeredSlides: true,
+		pagination: {
+			el: ".agt-project-pagination-6",
+			clickable: true,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			480: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 1,
+			},
+			1024: {
+				slidesPerView: 1,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+			1800: {
+				slidesPerView: 3,
+			},
+		},
+	})
+}
 if (window.matchMedia("(min-width: 1200px)").matches) {
 	const ServiceCardItem = gsap.utils.toArray(".agt-sr-item-5");
 	const animateCard = (card, wrapper, index) => {
@@ -1362,41 +1449,44 @@ ltn__active_item.mouseover(function() {
 	ltn__active_item.removeClass('active');
 	$(this).addClass('active');
 });
-const path = document.getElementById('line_path');
-const plane = document.getElementById('paper-plane');
-const pathLength = path.getTotalLength();
-let progress = 0.5; 
-let speed = 0.0012; 
-function animatePlane() {
-	const point = path.getPointAtLength(progress * pathLength);
-	plane.setAttribute('transform', `translate(${point.x}, ${point.y})`);
-	const tangent = path.getPointAtLength((progress + 0.01) * pathLength);
-	const angle = Math.atan2(tangent.y - point.y, tangent.x - point.x);
-	plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle * 180 / Math.PI})`);
-	progress += speed;
-	if (progress > 1) {
-		progress = 0;
+if ($('.line_shape_2').length > 0 ) {
+	const path = document.getElementById('line_path');
+	const plane = document.getElementById('paper-plane');
+	const pathLength = path.getTotalLength();
+	let progress = 0.5; 
+	let speed = 0.0012; 
+	function animatePlane() {
+		const point = path.getPointAtLength(progress * pathLength);
+		plane.setAttribute('transform', `translate(${point.x}, ${point.y})`);
+		const tangent = path.getPointAtLength((progress + 0.01) * pathLength);
+		const angle = Math.atan2(tangent.y - point.y, tangent.x - point.x);
+		plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle * 180 / Math.PI})`);
+		progress += speed;
+		if (progress > 1) {
+			progress = 0;
+		}
+		requestAnimationFrame(animatePlane);
 	}
-	requestAnimationFrame(animatePlane);
-}
-animatePlane();
-
-const pathes = document.getElementById('line_pathes');
-const planes = document.getElementById('paper-planes');
-const pathesLength = pathes.getTotalLength();
-let progresses = 0.5; 
-let speeds = 0.0012; 
-function animatePlanes() {
-	const point = pathes.getPointAtLength(progresses * pathesLength);
-	planes.setAttribute('transform', `translate(${point.x}, ${point.y})`);
-	const tangent = pathes.getPointAtLength((progresses + 0.01) * pathLength);
-	const angle = Math.atan2(tangent.y - point.y, tangent.x - point.x);
-	planes.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle * 180 / Math.PI})`);
-	progresses += speeds;
-	if (progresses > 1) {
-		progresses = 0;
+	animatePlane();
+};
+if ($('.line_shape_2').length > 0 ) {
+	const pathes = document.getElementById('line_pathes');
+	const planes = document.getElementById('paper-planes');
+	const pathesLength = pathes.getTotalLength();
+	let progresses = 0.5; 
+	let speeds = 0.0012; 
+	function animatePlanes() {
+		const point = pathes.getPointAtLength(progresses * pathesLength);
+		planes.setAttribute('transform', `translate(${point.x}, ${point.y})`);
+		const tangent = pathes.getPointAtLength((progresses + 0.01) * pathesLength);
+		const angle = Math.atan2(tangent.y - point.y, tangent.x - point.x);
+		planes.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle * 180 / Math.PI})`);
+		progresses += speeds;
+		if (progresses > 1) {
+			progresses = 0;
+		}
+		requestAnimationFrame(animatePlanes);
 	}
-	requestAnimationFrame(animatePlanes);
-}
-animatePlanes();
+	animatePlanes();
+};
 })(jQuery);

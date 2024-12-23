@@ -23,6 +23,21 @@
 		overflow: hidden;
 		border-bottom-left-radius: 64px;
 		border-bottom-right-radius: 64px;
+		img {
+			width: 	100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media #{$xs} {
+			height: 530px;
+		}
+		@media #{$xxs} {
+			height: 400px;
+		}
+		@media #{$xxs} {
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
 	}
 	.video-play-btn {
 		left: 0;
@@ -57,16 +72,34 @@
 		right: 0;
 		bottom: -22px;
 		position: absolute;
+		@media #{$lg,$md,$sm,$xs} {
+			bottom: 0;
+		}
 		h3 {
 			opacity: .64;
 			line-height: 1;
 			font-size: 128px;
 			color: var(--agn-clr-white-1);
+			@media #{$lg,$md} {
+				font-size: 100px;
+			}
+			@media #{$sm,$xs} {
+				font-size: 60px;
+			}
+			@media #{$xxs} {
+				font-size: 40px;
+			}
 		}
 	}
 	.item-shape {
 		right: 0;
 		bottom: 0;
 		position: absolute;
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			right: -50px;
+		}
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}
 	}
 }
