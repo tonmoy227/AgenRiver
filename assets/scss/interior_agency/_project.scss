@@ -67,6 +67,30 @@
 		background-color: #fff;
 		color: var(--agt-blk-clr-3);
 	}
+	.item_arrow {
+		z-index: 3;
+		right: 0px;
+		opacity: 0;
+		bottom: 50px;
+		position: absolute;
+		transition: all 500ms ease-in-out;
+		@media #{$sm,$xs} {
+			display: none;
+		}
+		a {
+			width: 56px;
+			height: 56px;
+			border-radius: 100%;
+			color: var(--agt-base-color-10);
+			-webkit-transition: all 300ms ease-in-out;
+			transition: all 300ms ease-in-out;
+			border: 2px solid var(--agt-base-color-10);
+			&:hover {
+				color: #fff;
+				background-color: var(--agt-base-color-10);
+			}
+		}
+	}
 }
 .agt-project-slider-6 {
 	margin-left: -375px;
@@ -103,6 +127,11 @@
 			@media #{$xxs} {
 				bottom: 25px;
 			}
+		}
+		.item_arrow { 
+			opacity: 1;
+			right: 40px;
+			transition-delay: 1500ms;
 		}
 	}
 }
