@@ -1,5 +1,4 @@
 .agt-quote-section {
-	z-index: 1;
 	margin-top: -50px;
 	border-bottom-left-radius: 64px;
 	border-bottom-right-radius: 64px;
@@ -7,12 +6,10 @@
 	.agt-quote-shape-1 {
 		right: 0;
 		top: 100px;
-		z-index: -1;
 	}
 	.agt-quote-shape-2 {
 		left: 0;
 		bottom: 0;
-		z-index: -1;
 		position: absolute;
 	}
 }

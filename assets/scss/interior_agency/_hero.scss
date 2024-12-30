@@ -7,14 +7,6 @@
 		left: 0;
 		bottom: 0;
 		position: absolute;
-		svg {
-			g {
-				path {
-					stroke-dashoffset: 2500;
-					stroke-dasharray: 0;
-				}
-			}
-		}
 	}
 	.item-cursor {
 		top: 50%;
@@ -78,6 +70,7 @@
 	&:before {
 		top: 0;
 		left: 0;
+		z-index: 1;
 		width: 100%;
 		height: 100%;
 		content: '';
@@ -157,4 +150,32 @@
 			color: rgba(255, 255, 255, .72);
 		}
 	}
+}
+.shape_ani {
+	// svg {
+	// 	path {
+	// 		transition: all 1500ms ease-in-out;
+	// 		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	// 		transition-delay: 500ms;
+	// 		&:nth-child(2) {
+	// 			transition-delay: 600ms;
+	// 		}
+	// 		&:nth-child(3) {
+	// 			transition-delay: 700ms;
+	// 		}
+	// 		&:nth-child(4) {
+	// 			transition-delay: 800ms;
+	// 		}
+	// 		&:nth-child(5) {
+	// 			transition-delay: 900ms;
+	// 		}
+	// 	}
+	// }
+	// &.active {
+	// 	svg {
+	// 		path {
+	// 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	// 		}
+	// 	}
+	// }
 }

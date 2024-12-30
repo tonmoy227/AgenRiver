@@ -328,6 +328,13 @@
 								opacity: 0,
 							});
 						}
+						if( $(el).hasClass('agt_hero_title_3') ){
+							gsap.set(el.split.chars, {
+								y: 100,
+								scaleX: 0,
+								opacity: 0,
+							});
+						}
 						el.anim = gsap.to(el.split.chars, {
 							scrollTrigger: {
 								trigger: el,
@@ -383,8 +390,23 @@
 						stagger: 0.1
 					});
 				});
+				const agtinh = gsap.timeline();
+				agtinh
+				.from(".agt-hero-img-6", {  scale: "1.3", x: -200, rotate: "5deg", duration: 2,  ease: "power2.inOut" })
+				.from(".agt-hero-author", { xPercent: 100, opacity: 0, duration: 1,  ease: "power2.inOut" });
+				const agtIntr = gsap.timeline({
+					scrollTrigger: {
+						trigger: '.gt-hero-section-6',
+						start: "top 0",
+						scrub: .5,
+						toggleActions: "play reverse play reverse",
+						markers: false
+					}
+				});
+				agtIntr
+				.to(".agt-hero-img-6", { scale: "1.5"})
 			}, 700);
-		})
+})
 });
 // Testimonial
 if($(".agt-tst-s-active").length) {
@@ -1356,9 +1378,41 @@ gsap.utils.toArray(' .draw-shape-img, .agt_sec_left_line, .agt_sec_right_line').
 		scrollTrigger: {
 			trigger: el,
 			scrub: 3,
-			start: "top 20%",
+			start: "top 0%",
 			end: "bottom 0",
 			toggleActions: "play reverse none reverse",
+			markers: false,
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'top top'})
+	.fromTo(el, { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)"}, {clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 1})
+});
+gsap.utils.toArray(' .shape_ani svg path').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".shape_trigger",
+			scrub: 1,
+			start: "top -5%",
+			end: "bottom 35%",
+			toggleActions: "play none none reverse",
+			markers: false,
+		}
+	})
+
+	tlcta
+	.set(el, {transformOrigin: 'top top'})
+	.fromTo(el, { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)"}, {clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 1})
+});
+gsap.utils.toArray(' .shape_ani_2 svg path').forEach((el, index) => { 
+	let tlcta = gsap.timeline({
+		scrollTrigger: {
+			trigger: el,
+			scrub: 1,
+			start: "top 40%",
+			end: "bottom 40%",
+			toggleActions: "play none none reverse",
 			markers: false,
 		}
 	})
@@ -1577,16 +1631,8 @@ mWrap.on("mouseover", function () {
 	});
 });
 
-gsap.to(".shape_ani", {
-	scrollTrigger: {
-		trigger: ".shape_ani",
-		start: "top 70%",
-		end: "top -100%",
-		toggleClass: "active",
-		toggleActions: "play none none reverse",
-		markers: false,
-	}
-});
+
+
 
 
 })(jQuery);
