@@ -513,8 +513,59 @@ if($(".agt-tst-slider-3").length) {
 			},
 		},
 	})
-
 }
+	// Blog Slide 6
+if($(".agt-blog-slider-6").length) {
+	const swiper = new Swiper(".agt-blog-slider-6" , {
+		speed: 800,
+		spaceBetween: 32,
+		loop: true,
+		pagination: {
+			el: ".agt-blg-pagination-6",
+			clickable: true,
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+			1800: {
+				slidesPerView: 3,
+			},
+		},
+	})
+}
+if($(".agt-testimonial-slider-6").length) {
+	var AGTEST = new Swiper(".agt-testimonial-slider-6", {
+		loop: true,
+		speed: 1000,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		navigation: {
+			nextEl: ".agt-tst6-next",
+			prevEl: ".agt-tst6-prev",
+		},
+	});
+};
 if($(".agt-ft-s-active").length) {
 	const swiper = new Swiper(".agt-ft-s-active" , {
 		speed: 500,
@@ -1489,4 +1540,53 @@ if ($('.line_shape_2').length > 0 ) {
 	}
 	animatePlanes();
 };
+var mWrap = $(".agt-hero-section-6");
+mWrap.on("mouseover", function () {
+	var mContent = $(this).find("#more_content");
+	var mArea = $(this).find("#more_area");
+
+	function parallaxIt(e, target, movement = 1) {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		var boundingRect = mArea[0].getBoundingClientRect();
+		var relX = e.pageX - boundingRect.left;
+		var relY = e.pageY - boundingRect.top;
+
+		gsap.to(mContent, {
+			x: (relX - boundingRect.width / 2) * movement,
+			y: (relY - boundingRect.height / 2 - scrollTop) * movement,
+			ease: "power1",
+			duration: 0.6
+		});
+	}
+
+	function callParallax(e) {
+		parallaxIt(e, mWrap);
+	}
+
+	mArea.mousemove(function (e) {
+		callParallax(e);
+	});
+	mArea.mouseleave(function (e) {
+		gsap.to(mContent, {
+			scale: 1,
+			x: 0,
+			y: 0,
+			ease: "power1",
+			duration: 0.6
+		});
+	});
+});
+
+gsap.to(".shape_ani", {
+	scrollTrigger: {
+		trigger: ".shape_ani",
+		start: "top 70%",
+		end: "top -100%",
+		toggleClass: "active",
+		toggleActions: "play none none reverse",
+		markers: false,
+	}
+});
+
+
 })(jQuery);

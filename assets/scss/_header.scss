@@ -877,6 +877,7 @@
 			}
 		}
 		&.white_ver {
+			top: 0;
 			.agt-header-content {
 				.main-navigation {
 					li {
@@ -900,6 +901,9 @@
 						background-color: var(--agn-clr-white-1);
 					}
 				}
+			}
+			&.txa_sticky_header {
+				top: 0;
 			}
 		}
 		&.txa_sticky_header {
