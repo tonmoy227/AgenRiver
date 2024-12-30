@@ -6,13 +6,17 @@
 }
 .agt-sp-title-6 {
 	margin: 0 auto;
-	font-size: 32px;
 	max-width: 950px;
-	line-height: 1.31;
-	letter-spacing: -.5px;
 	color: var(--agn-clr-black-2);
+	p {
+		font-size: 32px;
+		line-height: 1.31;
+		letter-spacing: -.5px;
+	}
 	@media #{$xs} {
-		font-size: 26px;
+		p {
+			font-size: 26px;
+		}
 	}
 }
 .agt-sponsor-content-6 {

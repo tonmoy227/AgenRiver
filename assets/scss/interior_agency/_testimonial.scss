@@ -1,9 +1,6 @@
 .agt-testimonial-section-6 {
 	z-index: 1;
 	padding-top: 210px;
-	overflow: hidden;
-	border-bottom-left-radius: 64px;
-	border-bottom-right-radius: 64px;
 	.agt-test-shape {
 		right: 0;
 		top: -150px;
@@ -39,8 +36,10 @@
 	}
 }
 .agt-testimonial-slider-6 {
-	margin-top: -64px;
 	overflow: hidden;
+	margin-top: -64px;
+	border-bottom-left-radius: 64px;
+	border-bottom-right-radius: 64px;
 }
 .agt-testi-item-6 {
 	z-index: 1;

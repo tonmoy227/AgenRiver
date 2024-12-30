@@ -335,6 +335,7 @@
 								opacity: 0,
 							});
 						}
+
 						el.anim = gsap.to(el.split.chars, {
 							scrollTrigger: {
 								trigger: el,
@@ -1013,6 +1014,13 @@ if($('.tx-split-text').length) {
 				ease: "back.out",
 			});
 		}
+		if( jQuery(el).hasClass('split-in-left') ){
+			gsap.set(el.split.words, {
+				opacity: 0,
+				y: 20,
+				ease: "back.out",
+			});
+		}
 		el.anim = gsap.to(el.split.words, {
 			scrollTrigger: {
 				trigger: el,
@@ -1513,7 +1521,21 @@ AgtService.from(".agt-s-item-3", {
 	xPercent: -50,
 	ease: "power2.out",
 });
-
+const AgtService2 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".agt-service-section-7",
+		start: "top 90%",
+		toggleActions: "play reverse play reverse",
+		markers: false,
+	},
+});
+AgtService2.from(".agt-sr-item-7", {
+	opacity: 0,
+	duration: 2.5,
+	stagger: -0.3,
+	yPercent: 50,
+	ease: "elastic.out(1,0.3)",
+});
 
 gsap.utils.toArray('.agt-part-content-3').forEach((el, index) => { 
 	let Sponsor = gsap.timeline({
@@ -1622,6 +1644,42 @@ mWrap.on("mouseover", function () {
 	});
 	mArea.mouseleave(function (e) {
 		gsap.to(mContent, {
+			scale: 1,
+			x: 0,
+			y: 0,
+			ease: "power1",
+			duration: 0.6
+		});
+	});
+});
+var mWrap2 = $(".agt-cta-section-6");
+mWrap2.on("mouseover", function () {
+	var mContent2 = $(this).find("#more_content_2");
+	var mArea2 = $(this).find("#more_area_2");
+
+	function parallaxIt(e, target, movement = 1) {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		var boundingRect = mArea2[0].getBoundingClientRect();
+		var relX = e.pageX - boundingRect.left;
+		var relY = e.pageY - boundingRect.top;
+
+		gsap.to(mContent2, {
+			x: (relX - boundingRect.width / 2) * movement,
+			y: (relY - boundingRect.height / 2 - scrollTop) * movement,
+			ease: "power1",
+			duration: 0.6
+		});
+	}
+
+	function callParallax(e) {
+		parallaxIt(e, mWrap2);
+	}
+
+	mArea2.mousemove(function (e) {
+		callParallax(e);
+	});
+	mArea2.mouseleave(function (e) {
+		gsap.to(mContent2, {
 			scale: 1,
 			x: 0,
 			y: 0,

@@ -19,6 +19,19 @@
 	max-width: 	225px;
 	text-align: center;
 	.item-icon {
+		position: relative;
 		margin-bottom: 23px;
+		transition: all 500ms ease-in-out;
+		svg {
+			path {
+				stroke-dasharray: 5000;
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+	&:hover {
+		.item-icon {
+			animation: rubberBand .7s;
+		}
 	}
 }

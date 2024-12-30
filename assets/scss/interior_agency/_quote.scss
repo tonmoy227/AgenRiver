@@ -52,20 +52,22 @@
 		}
 	}
 	.item-text {
-		color:  #333333;
-		font-size: 	45px;
-		max-width: 	808px;
-		line-height: 1.333;
-		@media #{$lg,$md,$sm,$xs} {
-			font-size: 	40px;
-			max-width: 	650px;
-		}
-		@media #{$md,$sm,$xs} {
-			text-align: center;
-			font-size: 	30px;
-		}
-		@media #{$xxs} {
-			font-size: 	20px;
+		h3 {
+			color:  #333333;
+			font-size: 	45px;
+			max-width: 	808px;
+			line-height: 1.333;
+			@media #{$lg,$md,$sm,$xs} {
+				font-size: 	40px;
+				max-width: 	650px;
+			}
+			@media #{$md,$sm,$xs} {
+				text-align: center;
+				font-size: 	30px;
+			}
+			@media #{$xxs} {
+				font-size: 	20px;
+			}
 		}
 	}
 }

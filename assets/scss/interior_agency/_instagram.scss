@@ -9,6 +9,7 @@
 		top: 70px;
 		left: 20px;
 		z-index: -1;
+		animation: Move_animation_1 12s infinite linear alternate;
 	}
 	.agt-in-shape-2 {
 		top: 0;
@@ -33,6 +34,18 @@
 	}
 	.item-wrap {
 		flex-direction: column;
+		.item-img {
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+			transition: all 700ms ease-in-out;
+		}
+		&.active {
+			.item-img {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+				&.ins_item_2 {
+					transition-delay: 300ms;
+				}
+			}
+		}
 		.item-text {
 			display: flex;
 			padding-left: 25px;
@@ -58,7 +71,21 @@
 .agt-insta-feed-2 {
 	.item-wrap {
 		gap: 14px;
-
+		.item-img {
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+			transition: all 700ms ease-in-out;
+		}
+		&.active {
+			.item-img {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+				&.ins_item_3 {
+					transition-delay: 400ms;
+				}
+				&.ins_item_4 {
+					transition-delay: 500ms;
+				}
+			}
+		}
 	}
 	h3 {
 		font-size: 45px;
@@ -82,4 +109,19 @@
 .agt-insta-feed-3 {
 	width: 100%;
 	max-width: 335px;
+	.item-img {
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		transition: all 700ms ease-in-out;
+	}
+	&.active {
+		.item-img {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			&.ins_item_5 {
+				transition-delay: 600ms;
+			}
+			&.ins_item_6 {
+				transition-delay: 700ms;
+			}
+		}
+	}
 }

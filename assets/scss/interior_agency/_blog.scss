@@ -43,10 +43,18 @@
 				height: 56px;
 				border-radius: 100%;
 				background-color: #fff;
+				transition: all 300ms ease-in-out;
 				border: 2px solid var(--agt-base-color-10);
 				i {
 					transform: rotate(-45deg);
 					color: var(--agt-base-color-10);
+					transition: all 300ms ease-in-out;
+				}
+				&:hover {
+					background-color: var(--agt-base-color-10);
+					i {
+						color: #fff;
+					}
 				}
 			}
 		}
@@ -92,6 +100,20 @@
 			overflow: hidden;
 			max-width: 300px;
 			border-radius: 20px;
+			img {
+				transition: all 500ms ease-in-out;
+			}
+		}
+	}
+	&:hover {
+		.item-img-meta {
+			.item-img {
+				img { 
+					filter: grayscale(1);
+					transform: scale(1.08);
+					mix-blend-mode: luminosity;
+				}
+			}
 		}
 	}
 }

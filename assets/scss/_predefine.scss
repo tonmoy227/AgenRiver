@@ -875,6 +875,9 @@ select:visited {
 		@media #{$xxs} {
 			font-size: 28px;
 		}
+		.split-line {
+			overflow: hidden;
+		}
 	}
 	p {
 		padding-top: 22px;

@@ -38,6 +38,10 @@
 			justify-content: center;
 			border: 1px solid rgba(255, 255, 255, 0.32);
 			backdrop-filter: blur(16px);
+			@media #{$md,$sm,$xs} {
+				height: 90px;
+				width: 90px;
+			}
 			i {
 				top: -8px;
 				margin-left: 5px;
@@ -55,6 +59,9 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+}
+#more_area {
+
 }
 .agt-hero-img-6 {
 	top: 0;

@@ -1,3 +1,20 @@
+@keyframes Move_animation_1 {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-80px);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	75% {
+		transform: translateX(80px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
 .agt-video-play-section-6 {
 	z-index: 1;
 	overflow: hidden;
@@ -5,6 +22,7 @@
 		top: 70px;
 		left: 20px;
 		z-index: -1;
+		animation: Move_animation_1 12s infinite linear alternate;
 	}
 	.agt-in-shape-2 {
 		top: 0;
