@@ -20,7 +20,8 @@ body {
 .agt-home-3,
 .agt-home-4,
 .agt-home-5,
-.agt-home-6 {
+.agt-home-6,
+.agt-home-7 {
 	margin: 0;
 	padding: 0;
 	z-index: 1;
@@ -81,6 +82,9 @@ body {
 }
 .agt-home-6::-webkit-scrollbar-thumb {
 	background: var(--agt-base-color-10);
+}
+.agt-home-7::-webkit-scrollbar-thumb {
+	background: var(--agt-blk-clr-4);
 }
 .agt-home-2 {
 	background-color: #fff; 
@@ -730,7 +734,8 @@ select:visited {
 
 ////////////////////////// After 10 Home Page I start Common css from here///////////////////
 .agt-home-5,
-.agt-home-6 {
+.agt-home-6,
+.agt-home-7 {
 	background-color: #F6EFE6;
 	font-family: var(--inter);
 	color: var(--agt-trv-bd);
@@ -752,6 +757,17 @@ select:visited {
 		font-weight: 400;
 		color: var(--agn-clr-black-1);
 		font-family: var(--ethereal);
+	}
+}
+.agt-home-7 {
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: transparent;
+	color: rgba(22, 19, 16, .72);
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 400;
+		color: var(--agt-blk-clr-4);
+		font-family: var(--misspis);
 	}
 }
 .agt-btn-5 {
@@ -834,6 +850,49 @@ select:visited {
 		}
 	}
 }
+.agt-btn-6 {
+	a {
+		display: flex;
+		color: #161310;
+		position: relative;
+		align-items: center;
+		display: inline-block;
+		justify-content: center;
+		padding: 17px 22px 13px;
+		background-color: #F0F5FF;
+		border: 1px solid #161310;
+		font-family: var(--misspis);
+		i {
+			padding-left: 45px;
+		}
+		&:before,
+		&:after {
+			right: -5px;
+			content: '';
+			bottom: -5px;
+			position: absolute;
+			background-color: #161310;
+			transition: all 500ms ease-in-out;
+		}
+		&:before {
+			width: 1px;
+			height: 24px;
+		}
+		&:after {
+			height: 1px;
+			width: 24px;
+		}
+		&:hover {
+			&:before {
+				height: 100%;
+			}
+			&:after {
+				width: 100%;
+			}
+		}
+
+	}
+}
 .agt-section-title-5 {
 	.sec_title {
 		line-height: 1;
@@ -885,5 +944,27 @@ select:visited {
 	&.text-center {
 		margin: 0 auto;
 		max-width: 680px;
+	}
+}
+.agt-section-title-7 {
+	.sec_title {
+		font-size: 64px;
+		line-height: 1.125;
+		color: var(--agt-blk-clr-4);
+		@media #{$lg} {
+			font-size: 50px;
+		}
+		@media #{$md,$sm} {
+			font-size: 55px;
+		}
+		@media #{$xs} {
+			font-size: 45px;
+		}
+		@media #{$xxs} {
+			font-size: 35px;
+		}
+		@media #{$xxxs} {
+			font-size: 28px;
+		}
 	}
 }

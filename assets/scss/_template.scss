@@ -10,10 +10,18 @@ Font load
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Field Demo';
 	src: url('../fonts/Fontspring-DEMO-fieldsdisplay-medium-iF663b4708d09c8.otf') format('otf');
 	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Misspiece';
+	src: url('../fonts/Yahya Type - Misspiece Regular.otf') format('otf');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
@@ -40,6 +48,7 @@ Font load
 	--agt-blk-clr: #4F5155;
 	--agt-blk-clr-2: #212326;
 	--agt-blk-clr-3: #333333;
+	--agt-blk-clr-4: #161310;
 	--agt-trv: #1E2F22;
 	--agt-trv-bd: rgba(30, 47, 34, .72);
 	--test-sohne-300 :'Test So:hne Extraleicht';
@@ -48,6 +57,7 @@ Font load
 	--inter: "Inter", sans-serif;
 	--field: "Field Demo";
 	--ethereal: "Ethereal Demo";
+	--misspis: "Misspiece";
 }
 // Responsive Variables
 

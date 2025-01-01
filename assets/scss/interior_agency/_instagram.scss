@@ -5,6 +5,14 @@
 	background-color: #fff;
 	border-bottom-left-radius: 64px;
 	border-bottom-right-radius: 64px;
+	&.ver_2 {
+		border-radius: 0;
+		margin: 0px 40px;
+		padding-top: 150px;
+		@media #{$md,$sm,$xs} {
+			margin: 0px 15px;
+		}
+	}
 	.agt-in-shape-1 {
 		top: 70px;
 		left: 20px;
@@ -20,6 +28,21 @@
 		left: 0;
 		z-index: -1;
 		bottom: 100px;
+	}
+	.agt-h-shape-7 {
+		width: 100%;
+		height: 174px;
+		position: relative;
+		@media #{$sm,$xs} {
+			display: none;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			opacity: .24;
+			object-fit: cover;
+			mix-blend-mode: multiply;
+		}
 	}
 }
 .agt-insta-feed-content {
@@ -64,6 +87,18 @@
 			i {
 				transform: rotate(-45deg);
 				color: var(--agt-base-color-10);
+			}
+		}
+	}
+	&.ver_2 {
+		.item-wrap {
+			.item-text {
+				span {
+					color: var(--agt-blk-clr-4);
+				}
+				i {
+					color: var(--agt-blk-clr-4);
+				}
 			}
 		}
 	}

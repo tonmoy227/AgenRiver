@@ -4,6 +4,9 @@
 	position: relative;
 	border-bottom-left-radius: 64px;
 	border-bottom-right-radius: 64px;
+	&.ver_2 {
+		border-radius: 0;
+	}
 	.item-cursor {
 		top: 57%;
 		left: 50%;
@@ -92,6 +95,10 @@
 			@media #{$xxs} {
 				font-size: 45px;
 			}
+		}
+		.agt-section-title-7 {
+			margin: 0 auto;
+			max-width: 995px;
 		}
 	}
 	.item-img {

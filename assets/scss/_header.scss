@@ -906,6 +906,17 @@
 				top: 0;
 			}
 		}
+		&.ver_3 {
+			.agt-header-content {
+				.main-navigation {
+					li {
+						&:after {
+							top: 2px;
+						}
+					}
+				}
+			}
+		}
 		&.txa_sticky_header {
 			top: 20px;
 			@media #{$md,$sm,$xs} {
@@ -926,6 +937,23 @@
 				&:is(.txa_sticky) {
 					&:is(.txa_sticky_show) {
 						background-color: var(--agn-clr-black-2);
+					}
+				}
+			}
+			&.ver_4 {
+				top: 0;
+				.agt-header-content {
+					.main-navigation {
+						li {
+							&:after {
+								top: 2px;
+							}
+						}
+					}
+					.agt-btn-6 {
+						@media #{$xxs} {
+							display: none;
+						}
 					}
 				}
 			}

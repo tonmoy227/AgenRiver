@@ -91,6 +91,21 @@
 			}
 		}
 	}
+	&.ver_2 {
+		.item-img {
+			border-radius: 0px;
+		}
+		.item_arrow {
+			a {
+				color: var(--agn-clr-white-1);
+				border: 2px solid var(--agn-clr-white-1);
+				&:hover {
+					color: var(--agt-blk-clr-4);
+					background-color: var(--agn-clr-white-1);
+				}
+			}
+		}
+	}
 }
 .agt-project-slider-6 {
 	margin-left: -375px;
