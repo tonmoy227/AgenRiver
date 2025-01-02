@@ -863,6 +863,11 @@
 				@media #{$md,$sm,$xs} {
 					display: none;
 				}
+				&.ver_2 {
+					span {
+						background-color: var(--agt-base-color-11);
+					}
+				}
 			}
 			.agt-btn-5 {
 				@media #{$sm,$xs} {
@@ -873,6 +878,45 @@
 				}
 				i {
 					padding: 14px;
+				}
+			}
+			.h-cta-btn {
+				@media #{$xxs} {
+					display: none;
+				}
+				a {
+					font-size: 16px;
+					line-height: .98;
+					font-weight: 600;
+					border-radius: 8px;
+					position: relative;
+					letter-spacing: .4px;
+					padding: 14px 18px 14px 38px;
+					color: var(--agn-clr-black-1);
+					background-color: var(--agn-clr-white-1);
+					&:before {
+						top: 16px;
+						left: 20px;
+						width: 10px;
+						content: '';
+						height: 10px;
+						position: absolute;
+						border-radius: 100%;
+						background-color: #00EB18;
+					}
+					&:after {
+						left: 17px;
+						top: 13px;
+						z-index: 1;
+						width: 15px;
+						content: "";
+						height: 15px;
+						border-radius: 100%;
+						position: absolute;
+						background-color: #00EB18;
+						-webkit-animation: borderpls 1.5s infinite cubic-bezier(0.4, 0, 1, 1) both;
+						animation: borderpls 1.5s infinite cubic-bezier(0.4, 0, 1, 1) both;
+					}
 				}
 			}
 		}
@@ -940,7 +984,8 @@
 					}
 				}
 			}
-			&.ver_4 {
+			&.ver_4,
+			&.ver_5 {
 				top: 0;
 				.agt-header-content {
 					.main-navigation {
@@ -955,6 +1000,12 @@
 							display: none;
 						}
 					}
+				}
+			}
+			&.ver_5 {
+				padding-top: 68px;
+				@media #{$xl,$lg,$md,$sm,$xs} {
+					padding-top: 25px;
 				}
 			}
 		}

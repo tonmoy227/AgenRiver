@@ -21,7 +21,8 @@ body {
 .agt-home-4,
 .agt-home-5,
 .agt-home-6,
-.agt-home-7 {
+.agt-home-7,
+.agt-home-8 {
 	margin: 0;
 	padding: 0;
 	z-index: 1;
@@ -85,6 +86,9 @@ body {
 }
 .agt-home-7::-webkit-scrollbar-thumb {
 	background: var(--agt-blk-clr-4);
+}
+.agt-home-7::-webkit-scrollbar-thumb {
+	background: var(--agt-base-color-11);
 }
 .agt-home-2 {
 	background-color: #fff; 
@@ -753,7 +757,8 @@ select:visited {
 }
 .agt-home-5,
 .agt-home-6,
-.agt-home-7 {
+.agt-home-7,
+.agt-home-8 {
 	background-color: #F6EFE6;
 	font-family: var(--inter);
 	color: var(--agt-trv-bd);
@@ -786,6 +791,17 @@ select:visited {
 		font-weight: 400;
 		color: var(--agt-blk-clr-4);
 		font-family: var(--misspis);
+	}
+}
+.agt-home-8 {
+	font-size: 18px;
+	line-height: 1.55;
+	color: rgba(0, 0, 0, .72);
+	background-color: var(--agt-gray-3);
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 400;
+		color: var(--agn-clr-black-1);
+		font-family: var(--host);
 	}
 }
 .agt-btn-5 {
@@ -919,6 +935,20 @@ select:visited {
 			i {
 				animation: toLeftFromRight 0.5s forwards;
 			}
+		}
+	}
+}
+.agt-btn-7 {
+	a {
+		font-size: 16px;
+		font-weight: 600;
+		border-radius: 8px;
+		letter-spacing: .4px;
+		padding: 15px 18px 15px 30px;
+		color: var(--agn-clr-white-1);
+		background-color: var(--agt-base-color-11);
+		img {
+			margin-left: 15px;
 		}
 	}
 }
