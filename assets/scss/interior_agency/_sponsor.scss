@@ -3,6 +3,10 @@
 	border-bottom-left-radius: 64px;
 	border-bottom-right-radius: 64px;
 	background-color: var(--agt-gray-1);
+	&.ver_2 {
+		background-color: transparent;
+		border-radius: 0;
+	}
 }
 .agt-sp-title-6 {
 	margin: 0 auto;
