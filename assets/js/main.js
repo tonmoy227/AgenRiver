@@ -1810,7 +1810,138 @@ mWrap2.on("mouseover", function () {
 		});
 	});
 });
+if(window.innerWidth> 1200){
+	if ($('.agt-ps-gallery-wrap').length > 0 ) {
+		function initGoalsScroll(e) {
+			let t = (e = e || document).querySelector(".agt-ps-gallery-wrap"),
+			item_1 = t.querySelectorAll(".ps_item_1");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 60%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_1, {
+				y: 400,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
 
+			let item_2 = t.querySelectorAll(".ps_item_2");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 60%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_2, {
+				y: 310,
+				x: -260,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
+
+			let item_3 = t.querySelectorAll(".ps_item_3");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 60%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_3, {
+				y: 10,
+				x: -470,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
+
+			let item_4 = t.querySelectorAll(".ps_item_4");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 50%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_4, {
+				y: -190,
+				x: -280,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
+
+			let item_5 = t.querySelectorAll(".ps_item_5");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 40%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_5, {
+				y: -435,
+				x: -15,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
+
+			let item_6 = t.querySelectorAll(".ps_item_6");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 50%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_6, {
+				y: -220,
+				x: 285,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
+
+			let item_7 = t.querySelectorAll(".ps_item_7");
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: t,
+					start: "top 60%",
+					toggleActions: "play none none reverse"
+				}
+			}).from(item_7, {
+				x: 450,
+				ease: "back.out(2.5)",
+				duration: 1,
+				stagger: {
+					each: .05,
+					from: "end"
+				},
+			})
+
+		}
+		initGoalsScroll();
+	};
+};
 
 
 

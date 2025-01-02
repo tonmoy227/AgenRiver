@@ -17,14 +17,14 @@ Font load
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @font-face {
   font-family: "Field Demo";
-  src: url("../fonts/Fontspring-DEMO-fieldsdisplay-regular-iF663b470905700.otf") format("otf");
+  src: url("../fonts/Fontspring-DEMO-fieldsdisplay-regular-iF663b470905700.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Field Demo";
-  src: url("../fonts/Fontspring-DEMO-fieldsdisplay-medium-iF663b4708d09c8.otf") format("otf");
+  src: url("../fonts/Fontspring-DEMO-fieldsdisplay-medium-iF663b4708d09c8.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2540,7 +2540,7 @@ select:visited {
 }
 .agt-section-title-5.text-center {
   margin: 0 auto;
-  max-width: 880px;
+  max-width: 950px;
 }
 
 .agt-section-title-6 .sec_title {
@@ -11852,6 +11852,12 @@ select:visited {
   line-height: 1;
   font-size: 26px;
 }
+.agt-package-item .item-value .v-price h4 b {
+  font-size: 22px;
+  font-weight: 400;
+  margin-right: 1px;
+  font-family: var(--inter);
+}
 .agt-package-item .item-value .v-price span {
   display: block;
   font-size: 14px;
@@ -11905,7 +11911,7 @@ select:visited {
 }
 .agt-testimonial-section-5 .agt-section-title-5 {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 650px;
 }
 
 .agt-testi-slider-5 {
@@ -14062,6 +14068,8 @@ select:visited {
 }
 .agt-ps-gallery-wrap .item-item {
   position: absolute;
+}
+.agt-ps-gallery-wrap .item-item .inner-img {
   animation-name: floating;
   -webkit-animation-name: floating;
   animation-iteration-count: infinite;
@@ -14099,6 +14107,8 @@ select:visited {
 .agt-ps-gallery-wrap .item-item:nth-child(1) {
   left: 0;
   top: 87px;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(1) .inner-img {
   animation-duration: 10s;
   -webkit-animation-duration: 10s;
   -webkit-transition-delay: 0.6s;
@@ -14108,6 +14118,8 @@ select:visited {
   left: 22%;
   top: 187px;
   z-index: 5;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(2) .inner-img {
   animation-duration: 12s;
   -webkit-animation-duration: 12s;
   -webkit-transition-delay: 0s;
@@ -14117,6 +14129,8 @@ select:visited {
   left: 36%;
   z-index: 4;
   bottom: 150px;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(3) .inner-img {
   animation-duration: 11s;
   -webkit-animation-duration: 11s;
   -webkit-transition-delay: 0.6s;
@@ -14126,6 +14140,8 @@ select:visited {
   top: 0;
   left: 45%;
   z-index: 2;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(4) .inner-img {
   animation-duration: 6s;
   -webkit-animation-duration: 6s;
   -webkit-transition-delay: 0.2s;
@@ -14135,6 +14151,8 @@ select:visited {
   right: 9%;
   z-index: 3;
   bottom: 165px;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(5) .inner-img {
   animation-duration: 7s;
   -webkit-animation-duration: 7s;
   -webkit-transition-delay: 0.7s;
@@ -14144,6 +14162,8 @@ select:visited {
   right: 0;
   z-index: 2;
   top: 103px;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(6) .inner-img {
   animation-duration: 5s;
   -webkit-animation-duration: 5s;
   -webkit-transition-delay: 0.1s;
@@ -14153,6 +14173,8 @@ select:visited {
   left: 18%;
   bottom: 0;
   z-index: 2;
+}
+.agt-ps-gallery-wrap .item-item:nth-child(7) .inner-img {
   animation-duration: 7s;
   -webkit-animation-duration: 5s;
   -webkit-transition-delay: 0.15s;
