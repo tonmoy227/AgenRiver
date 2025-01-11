@@ -1,0 +1,281 @@
+.agt-abp-sec-1 {
+	z-index: 1;
+	.agt-section-title-1 {
+		max-width: 870px;
+	}
+	&:before {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		content: '';
+		z-index: -1;
+		height: 300px;
+		position: absolute;
+		background-color: #18333B;
+	}
+}
+.agt-abp-img-list {
+	.item-img {
+		overflow: hidden;
+		border-radius: 12px;
+		display: inline-block;
+	}
+	ul {
+		right: 0;
+		top: 48px;
+		position: absolute;
+		padding: 40px 50px;
+		border-radius: 12px;
+		background-color: #fff;
+		color: var(--agn-clr-black-1);
+		@media #{$xs} {
+			position: static;
+		}
+		@media #{$xxs} {
+			padding: 30px 30px;
+		}
+		li {
+			margin-bottom: 18px;
+			@media #{$xs} {
+				margin-right: 15px;
+				display: inline-block;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+.agt-abp-count-sec-1 {
+	background-color: #18333B;
+}
+.agt-abp-state-content {
+	gap: 30px 20px; 
+	justify-content: space-between;
+	@media #{$xs} {
+		flex-wrap: wrap;
+	}
+}
+.agt-abp-state-sec-1 {
+	background-color: #18333B;
+	.agt-section-title-1 {
+		max-width: 550px;
+		.sec_title {
+			color: #fff;
+		}
+		p {
+			padding-top: 15px;
+			color: rgba(255, 255, 255, .80);
+		}
+	}
+}
+.agt-abp-state-progress {
+	max-width: 500px;
+	width: 100%;
+	.skill-set-percent {
+		width: 100%;
+		margin-bottom: 28px;
+	}
+	.skill-set-percent h4 {
+		z-index: 1;
+		left: 0px;
+		color: #fff;
+		font-size: 18px;
+		padding-bottom: 15px;
+		font-family: var(--test-sohne-500);
+
+	}
+	.skill-set-percent .progress {
+		height: 10px;
+		border-radius: 0;
+		margin-bottom: 6px;
+		overflow: visible;
+		position: relative;
+		border-radius: 30px;
+		background: rgba(255, 255, 255, 0.12);
+		&:last-child {
+			margin-bottom: 0;
+			.progress-bar {
+				background: var(--agt-base-color-1);
+			}
+		}
+	}
+	.skill-set-percent .progress span {
+		right: 0;
+		top: -34px;
+		font-size: 17px;
+		position: absolute;
+		color: var(--agt-base-color-1);
+	}
+	.skill-set-percent .progress-bar {
+		top: -5px;
+		width: 0;
+		left: 0px;
+		float: left;
+		height: 100%;
+		position: relative;
+		border-radius: 30px;
+		background-color: rgb(157, 163, 222);
+		-webkit-transition: 1s all ease-in-out;
+		transition: 1s all ease-in-out;
+	}
+}
+.agt-abp-goal-miss-sec {
+	background-color: #18333B;
+	.agt-abp-gm-img {
+		top: 0;
+		left: 0;
+		width: 58%;
+		height: 100%;
+		position: absolute;
+		@media #{$xs} {
+			display: none;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: #121C23;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			mix-blend-mode: luminosity;
+		}
+	}
+}
+.agt-abp-gm-item {
+	width: 100%;
+	max-width: 348px;
+	padding: 30px 40px;
+	border-radius: 8px;
+	backdrop-filter: blur(12px);
+	background: rgba(255, 255, 255, 0.72);
+	@media #{$xs} {
+		max-width: 100%;
+	}
+	.item-icon {
+		margin-bottom: 26px;
+	}
+	.item-text {
+		h3 {
+			font-size: 24px;
+			padding-bottom: 16px;
+			font-family: var(--test-sohne-600);
+		}
+	}
+}
+.agt-abp-gm-item-wrap {
+	display: flex;
+	gap: 30px 40px;
+	@media #{$xs} {
+		flex-wrap: wrap;
+	}
+}
+.agt-abp-cta-section {
+	background-color: #fff;
+}
+.agt-abp-cta-text {
+	max-width: 680px;
+	@media #{$lg,$md,$sm,$xs} {
+		margin: 0 auto;
+		max-width: 720px;
+	}
+	.agt-section-title-1 {
+		margin-bottom: 28px;
+		p {
+			font-size: 18px;
+			padding-top: 15px;
+			color: rgba(0, 0, 0, .80);
+		}
+	}
+	.agt-abp-cta-info {
+		gap: 16px;
+		.item-icon {
+			width: 84px;
+			height: 84px;
+			border-radius: 100%;
+			border: 1px solid rgba(89, 110, 255, .08);
+			span {
+				width: 60px;
+				height: 60px;
+				border-radius: 100%;
+				border: 1px solid rgba(89, 110, 255, .32);
+				img {
+					width: 36px;
+					height: 36px;
+					padding: 8px;
+					border-radius: 100%;
+					background-color: #596EFF;
+				}
+			}
+		}
+		.item-text {
+			span {
+				color: #3D3D3D;
+				@media #{$xxs} {
+					font-size: 16px;
+				}
+			}
+			h3 {
+				color: #596EFF;
+				font-size: 23px;
+				font-family: var(--test-sohne-500);
+				@media #{$xxs} {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.agt-abp-cta-img-wrap {
+	top: 50%;
+	right: 120px;
+	width: 100%;
+	max-width: 732px;
+	position: absolute;
+	transform: translateY(-50%);
+	@media #{$xxxl,$xxl,$xl} {
+		right: 15px;
+	}
+	@media #{$xxl} {
+		max-width: 600px;
+	}
+	@media #{$xl} {
+		max-width: 500px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		margin: 0 auto;
+		position: static;
+		text-align: center;
+		margin-bottom: 40px;
+		transform: translateY(0%);
+	}
+	.item-img-1 {
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	.item-img-2 {
+		max-width: 474px;
+		clip-path: polygon( 54.488% 2.454%,54.488% 2.454%,54.102% 2.456%,53.718% 2.461%,53.334% 2.47%,52.951% 2.482%,52.568% 2.497%,52.187% 2.516%,51.806% 2.538%,51.426% 2.563%,51.047% 2.592%,50.669% 2.623%,50.669% 38.313%,50.669% 38.313%,48.757% 31.9%,46.073% 25.89%,42.681% 20.347%,38.64% 15.334%,34.011% 10.916%,28.858% 7.158%,23.24% 4.123%,17.219% 1.875%,10.857% 0.479%,4.214% 0%,4.214% 0%,3.809% 0.002%,3.404% 0.007%,3% 0.016%,2.597% 0.029%,2.195% 0.045%,1.793% 0.065%,1.393% 0.088%,0.994% 0.115%,0.595% 0.145%,0.197% 0.178%,0.197% 99.771%,0.197% 99.771%,0.595% 99.804%,0.994% 99.833%,1.393% 99.86%,1.793% 99.883%,2.195% 99.903%,2.597% 99.92%,3% 99.932%,3.404% 99.942%,3.809% 99.947%,4.214% 99.949%,4.214% 99.949%,10.857% 99.47%,17.219% 98.074%,23.24% 95.827%,28.858% 92.792%,34.011% 89.033%,38.639% 84.615%,42.68% 79.602%,46.073% 74.059%,48.755% 68.049%,50.667% 61.637%,50.667% 97.326%,50.667% 97.326%,51.045% 97.358%,51.424% 97.386%,51.804% 97.411%,52.185% 97.433%,52.566% 97.452%,52.948% 97.468%,53.332% 97.48%,53.715% 97.489%,54.1% 97.494%,54.486% 97.496%,54.486% 97.496%,61.853% 96.874%,68.842% 95.073%,75.358% 92.192%,81.31% 88.327%,86.602% 83.577%,91.141% 78.04%,94.835% 71.814%,97.589% 64.996%,99.31% 57.684%,99.905% 49.976%,99.905% 49.976%,99.31% 42.268%,97.589% 34.956%,94.836% 28.137%,91.142% 21.91%,86.603% 16.373%,81.311% 11.623%,75.36% 7.758%,68.844% 4.877%,61.855% 3.076%,54.488% 2.454% );
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media #{$xxl} {
+			max-width: 400px;
+		}
+		@media #{$xl} {
+			max-width: 300px;
+		}
+	}
+}

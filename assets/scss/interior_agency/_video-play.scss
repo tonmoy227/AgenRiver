@@ -120,4 +120,14 @@
 			display: none;
 		}
 	}
+	&.ver_2 {
+		.item-img {
+			border-radius: 12px;
+		}
+		.video-play-btn {
+			a {
+				color: #596EFF;
+			}
+		}
+	}
 }

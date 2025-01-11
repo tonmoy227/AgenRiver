@@ -746,3 +746,130 @@
 		right: 16px;
 	}
 }
+.agt-fr-footer-section {
+	z-index: 1;
+	overflow: hidden;
+	padding-top: 220px;
+	position: relative;
+	&:before,
+	&:after {
+		z-index: -1;
+		content: '';
+		position: absolute;
+		height: 240px;
+		width: 240px;
+		border-radius: 100%;
+		-webkit-filter: blur(80px);
+		filter: blur(80px);
+		
+	}
+	&:before {
+		right: -80px;
+		bottom: -220px;
+		background-color: var(--agt-base-color-11);
+	}
+	&:after {
+		left: -100px;
+		bottom: -220px;
+		background-color: #00EB18;
+	}
+	.agt-fr-ft-line {
+		right: 0;
+		z-index: -1;
+		bottom: -195px;
+	}
+}
+.agt-fr-footer-widget {
+	gap: 30px;
+	padding-bottom: 125px;
+	@media #{$xs} {
+		flex-wrap: wrap;
+	}
+}
+.agt-fr-logo-widget {
+	.brand-logo {
+		margin-bottom: 100px;
+	}
+	p {
+		font-size: 16px;
+		color: rgba(30, 47, 34, 0.64);
+		a {
+			color: var(--agn-clr-black-1);
+		}
+	}
+}
+.agt-fr-menu-widget {
+	gap: 20px 120px;
+	@media #{$xxs} {
+		gap: 20px 60px;
+	}
+	ul {
+		width: 80px;
+	}
+	li {
+		margin-bottom: 10px;
+		a {
+			font-size: 16px;
+			color: var(--agn-clr-black-1);
+			&:hover {
+				margin-left: 5px;
+				letter-spacing: 1px;
+				color: var(--agt-base-color-11);
+			}
+		}
+	}
+	.ft-social {
+		width: 135px;
+		li {
+			width: 100%;
+			a {
+				width: 100%;
+				position: relative;
+				&:before {
+					top: 0;
+					right: 0;
+					font-size: 14px;
+					font-weight: 700;
+					content: "\f061";
+					position: absolute;
+					font-family: "FontAwesome";
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+.agt-fr-ft-mail {
+	a {
+		z-index: 2;
+		font-size: 16px;
+		position: relative;
+		color: var(--agn-clr-black-1);
+		i {
+			margin-right: 5px;
+		}
+	}
+	h3 {
+		line-height: 1;
+		font-size: 128px;
+		font-weight: 500;
+		margin-bottom: -18px;
+		color: var(--agn-clr-black-1);
+		@media #{$xl,$lg} {
+			font-size: 100px;
+		}
+		@media #{$md,$sm,$xs} {
+			font-size: 70px;
+			margin-bottom: 0;
+		}
+		@media #{$xs} {
+			font-size: 40px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+		@media #{$xxxs} {
+			font-size: 24px;
+		}
+	}
+}

@@ -39,6 +39,11 @@
 			font-size: 18px;
 		}
 	}
+	&:hover {
+		.item-icon {
+			animation: bounce 1s;
+		}
+	}
 }
 .col-lg-4 {
 	&:last-child {

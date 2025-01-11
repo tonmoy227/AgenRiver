@@ -917,6 +917,10 @@
 						-webkit-animation: borderpls 1.5s infinite cubic-bezier(0.4, 0, 1, 1) both;
 						animation: borderpls 1.5s infinite cubic-bezier(0.4, 0, 1, 1) both;
 					}
+					&:hover {
+						color: #fff;
+						background-color: var(--agt-base-color-11);
+					}
 				}
 			}
 		}
@@ -998,6 +1002,14 @@
 					.agt-btn-6 {
 						@media #{$xxs} {
 							display: none;
+						}
+					}
+				}
+				&.txa_sticky_header {
+					&:is(.txa_sticky) {
+						&:is(.txa_sticky_show) {
+							padding: 20px 0px;
+							background-color: #fff;
 						}
 					}
 				}

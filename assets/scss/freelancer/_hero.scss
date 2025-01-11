@@ -50,7 +50,7 @@
 }
 .agt-hero-text-8 {
 	z-index: 2;
-	max-width: 570px;
+	max-width: 600px;
 	padding-top: 340px;
 	position: relative;
 	padding-bottom: 275px;
@@ -86,9 +86,12 @@
 		@media #{$xxxs} {
 			font-size: 40px;
 		}
-		span {
+		.agt-hightlight {
 			display: inline;
 			color: rgba(0, 0, 0, 1);
+		}
+		.split-line {
+			overflow: hidden;
 		}
 	}
 	p {

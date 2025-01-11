@@ -40,6 +40,11 @@
 			color: var(--agn-clr-black-1);
 		}
 	}
+	&:hover {
+		.item-icon {
+			animation: bounceIn 0.7s;
+		}
+	}
 }
 .agt-fr-ser-img {
 	height: 100%;

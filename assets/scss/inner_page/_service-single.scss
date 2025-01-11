@@ -1,0 +1,28 @@
+.agt-service-details-section {
+	z-index: 2;
+	position: relative;
+}
+.agt-sd-thumb {
+	justify-content: end;
+	.item-img {
+		overflow: hidden;
+		margin-top: -300px;
+		border-radius: 12px;
+		display: inline-block;
+	}
+}
+.agt-sd-text-wrap {
+	.item-text-area {
+		margin: 0 auto;
+		max-width: 730px;
+		p {
+			padding-bottom: 30px;
+		}
+		h2 {
+			color: #010101;
+			font-size: 32px;
+			padding-bottom: 25px;
+			font-family: var(--test-sohne-500);
+		}
+	}
+}

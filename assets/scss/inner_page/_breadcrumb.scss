@@ -1,0 +1,125 @@
+.agt-brd-section-1 {
+	z-index: 1;
+	overflow: hidden;
+	border-bottom-left-radius: 38px;
+	border-bottom-right-radius: 38px;
+	.agt-brd-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 	100%;
+		height: 100%;
+		&:before {
+			top: 0;
+			left: 0;
+			content: '';
+			width: 	100%;
+			height: 100%;
+			position: absolute;
+			background-color: #121C23;
+		}
+		img {
+			opacity: .8;
+			width: 	100%;
+			height: 100%;
+			object-fit: cover;
+			mix-blend-mode: luminosity;
+		}
+	}
+}
+.agt-brd-content {
+	padding-top: 240px;
+	padding-bottom: 175px;
+	@media #{$md,$sm,$xs} {
+		padding-top: 180px;
+		padding-bottom: 120px;
+	}
+	.brd_title {
+		color: #fff;
+		font-size: 68px;
+		line-height: 1.06;
+		padding-bottom: 22px;
+		font-family: var(--test-sohne-600);
+		@media #{$md,$sm,$xs} {
+			font-size: 50px;
+		}
+		@media #{$xxs} {
+			font-size: 40px;
+			padding-bottom: 15px;
+		}
+	}
+	ul {
+		padding: 13px 28px;
+		border-radius:7px;
+		display: inline-block;
+		background-color: rgba(255, 255, 255, 0.2);
+		border: 1px solid var(--agt-base-color-1);
+		@media #{$md,$sm,$xs} {
+			padding: 10px 20px;
+		}
+		@media #{$xxs} {
+			padding: 8px 15px;
+		}
+		li {
+			color: #fff;
+			font-weight: 500;
+			font-size: 	16px;
+			margin-right: 28px;
+			position: relative;
+			&:before {
+				top: 5px;
+				width: 16px;
+				content: '';
+				height: 16px;
+				right: -26px;
+				position: absolute;
+				background-repeat: no-repeat;
+				background-image: url(../imgs/icon/b-icon.svg);
+			}
+			a {
+				color: var(--agt-base-color-1);
+			}
+			&:last-child {
+				margin-right: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.agt-brd-section-2 {
+	
+}
+.agt-brd-text-2 {
+	padding-top: 175px;
+	padding-bottom: 150px;
+	@media #{$md,$sm,$xs} {
+		padding-top: 130px;
+		padding-bottom: 100px;
+	}
+	a {
+		color: #fff;
+		font-size: 16px;
+		i {
+			margin-right: 10px;
+			color: var(--agt-base-color-1);
+		}
+	}
+	.agt-single-title {
+		font-size: 68px;
+		line-height: 1.05;
+		max-width: 450px;
+		padding-top: 60px;
+		font-family: var(--test-sohne-600);
+		color: rgba(255, 255, 255, 1);
+		@media #{$md,$sm,$xs} {
+			font-size: 50px;
+			padding-top: 40px;
+		}
+		@media #{$xxs} {
+			font-size: 40px;
+			padding-top: 30px;
+		}
+	}
+}
