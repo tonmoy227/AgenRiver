@@ -809,6 +809,9 @@
 	}
 	&.header_type_five {
 		padding-top: 28px;
+		&.inner_page_version {
+			padding-top: 8px;
+		}
 		@media #{$md,$sm,$xs} {
 			padding-top: 15px;
 		}

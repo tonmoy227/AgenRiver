@@ -279,3 +279,24 @@
 		}
 	}
 }
+.agt-trv-about-section {
+	padding-top: 220px;
+}
+.agt-trv-about-top {
+	.trv_title {
+		color: #10172B;
+		line-height: 1;
+		font-size: 64px;
+		max-width: 755px;
+	}
+	.trv_count {
+		h3 {
+			color: var(--agt-base-color-9);;
+			span {
+				color: #1E2F22;
+				line-height: .7;
+				font-size: 160px;
+			}
+		}
+	}
+}
