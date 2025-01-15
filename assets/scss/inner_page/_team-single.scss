@@ -1,9 +1,33 @@
 .agt-team-details-section {
 	position: relative;
+	&.ver_2 {
+		z-index: 1;
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			padding-bottom: 80px;
+		}
+		&:before {
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			content: '';
+			width: 100%;
+			height: 120px;
+			position: absolute;
+			background-color: #111827;
+			border-top-left-radius: 16px;
+			border-top-right-radius: 16px;
+			@media #{$xl,$lg,$md,$sm,$xs} {
+				display: none;
+			}
+		}
+	}
 }
 .agt-tmd-content {
 	gap: 30px 80px;
 	margin-top: -285px;
+	&.ver_2 {
+		margin-top: 0;
+	}
 	@media #{$lg,$md,$xs} {
 		gap: 30px;
 		margin-top: 70px;
@@ -51,6 +75,19 @@
 					font-size: 40px;
 				}
 			}
+			&.ver_2 {
+				padding-top: 0;
+				padding-bottom: 15px;
+				span {
+					color: var(--agt-base-color-9);
+				}
+				h2 {
+					color: #1E2F22;
+					font-size: 40px;
+					padding-top: 10px;
+					font-family: var(--field);
+				}
+			}
 		}
 		.item-desc {
 			p {
@@ -75,6 +112,7 @@
 			.social-icon {
 				border-radius: 8px;
 				display: inline-block;
+				background-color: #fff;
 				box-shadow: -12px 12px 36px 0px #0000001F;
 				a {
 					width: 50px;
@@ -88,11 +126,19 @@
 					}
 				}
 			}
+			&.ver_2 {
+				.social-icon {
+
+				}
+			}
 		}
 	}
 }
 .agt-tds-skill-sec {
 	background-color: #18333B;
+	&.ver_2 {
+		background-color: #111827;
+	}
 }
 .agt-tds-skill-text-wrap {
 	gap: 30px 80px;
@@ -115,6 +161,12 @@
 		color: #fff;
 		padding-bottom: 20px;
 	}
+	&.ver_2 {
+		h3 {
+			line-height: 1;
+			font-family: var(--field);
+		}
+	}
 }
 .agt-tds-skill-progress {
 	width: 100%;
@@ -124,6 +176,12 @@
 		font-size: 40px;
 		padding-bottom: 25px;
 		font-family: var(--test-sohne-500);
+	}
+	&.ver_2 {
+		h3 {
+			line-height: 1;
+			font-family: var(--field);
+		}
 	}
 }
 .agt-td-contact-section {
@@ -139,6 +197,13 @@
 		position: absolute;
 		background-color: #18333B;
 	}
+	&.ver_2 {
+		&:before {
+			background-color: #111827;
+			border-bottom-left-radius: 16px;
+			border-bottom-right-radius: 16px;
+		}
+	}
 }
 .agt-td-contact-content {
 	gap: 20px;
@@ -150,7 +215,21 @@
 		flex-wrap: wrap;
 	}
 	.agt-cn-form {
-		padding-right: 0;
+		padding: 60px 40px;
+		&.ver_2 {
+			h3 {
+				font-family: var(--field);
+				@media #{$xs} {
+					font-size: 26px;
+				}
+			}
+			.agt-contact-form-input button {
+				color: #fff;
+				clip-path: none;
+				border-radius: 100px;
+				background-color: var(--agt-base-color-9);
+			}
+		}
 	}
 	.agt-tmcn-img {
 		width: 100%;
