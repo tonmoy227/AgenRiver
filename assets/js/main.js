@@ -2076,5 +2076,26 @@ if ($(".progress-bar").length) {
 
 	});
 };
+if(window.innerWidth> 1200){
+	if ($(".agt-pr-feed-top").length) {
+		const products = $(".products");
+		const allButtons = $(".agt-view-btn button");
+		const grid3Button = $(".grid-3");
+		const listViewButton = $(".list-view");
+		allButtons.each(function () {
+			const $this = $(this);
+			$this.on("click", function (e) {
+				e.preventDefault();
+				$this.addClass("active").siblings().removeClass("active");
+			});
+		});
+		grid3Button.on("click", function () {
+			products.removeClass("default-column list-view").addClass("three-column");
+		});
+		listViewButton.on("click", function () {
+			products.removeClass("default-column two-column").addClass("list-view");
+		});
+	}
+};
 
 })(jQuery);
