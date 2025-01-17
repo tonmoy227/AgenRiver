@@ -16,6 +16,19 @@
 			}
 		}
 	}
+	&.ver_2 {
+		ul {
+			background-color: rgba(32, 32, 32, 0.08);
+			li {
+				a {
+					color: #202020;
+					i {
+						color: #202020;
+					}
+				}
+			}
+		}
+	}
 }
 .agt-blog-details-section {
 	z-index: 2;
@@ -110,6 +123,21 @@
 				}
 			}
 		}
+		&.ver_2 {
+			blockquote {
+				background-color: #F7F7F8;
+				border-left: 4px solid var(--arv-se-color-1);
+				border-right: 4px solid var(--arv-se-color-1);
+				&:before {
+					color: var(--arv-se-color-1);
+				}
+				span {
+					&:before {
+						background-color: var(--arv-se-color-1);
+					}
+				}
+			}
+		}
 	}
 	.item-img-wrap-row {
 		.item-img {
@@ -147,6 +175,14 @@
 			&:hover {
 				color: #fff;
 				background-color: #596EFF;
+			}
+		}
+		&.ver_2 {
+			a {
+				background-color: #F4F4F4;
+				&:hover {
+					background-color: var(--arv-se-color-1);
+				}
 			}
 		}
 	}

@@ -71,19 +71,19 @@
 				}
 			}
 		}
-		.desti-details-photo-gallery {
-			.gallery-item-1 {
-				gap: 20px;
-				margin-bottom: 20px;
-				.item-img {
-					overflow: hidden;
-					border-radius: 10px;
-				}
-				@media #{$xs} {
-					flex-wrap: wrap;
-					justify-content: center;
-				}
-			}
+	}
+}
+.desti-details-photo-gallery {
+	.gallery-item-1 {
+		gap: 20px;
+		margin-bottom: 20px;
+		.item-img {
+			overflow: hidden;
+			border-radius: 10px;
+		}
+		@media #{$xs} {
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 }

@@ -1,5 +1,8 @@
 .agt-testimonial-section-3 {
 	overflow: hidden;
+	&.ver_2 {
+		font-family: var(--inter);
+	}
 }
 .agt-tst-wrap-3 {
 	margin-right: -290px;

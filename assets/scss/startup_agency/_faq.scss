@@ -3,8 +3,12 @@
 	&.ver_2 {
 		background-color: transparent;
 	}
+	&.ver_3 {
+		background-color: #F8FAFF;
+	}
 }
 .agt-fq-content-4 {
+	z-index: 1;
 	gap: 30px 40px;
 	@media #{$md,$sm,$xs,$xxs} {
 		flex-wrap: wrap;
@@ -132,5 +136,8 @@
 				background-color: rgba(213, 220, 222, 0.32);
 			}
 		}
+	}
+	&.agt-interior {
+		font-family: var(--inter);
 	}
 }
