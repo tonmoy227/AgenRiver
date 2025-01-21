@@ -765,7 +765,7 @@
 	z-index: 1;
 	padding-bottom: 85px;
 	@media #{$md,$sm,$xs} {
-		padding-bottom: 00;
+		padding-bottom: 0;
 	}
 	.agt-abp-wc-img-4 {
 		bottom: 0;
@@ -846,5 +846,234 @@
 	position: absolute;
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		display: none;
+	}
+}
+.law_inner {
+	background-color: #fff;
+	font-family: var(--inter);
+	h1,h2,h3,h4,h5,h6 {
+		font-family: var(--lora) !important;
+	}
+	.agt-brd-content .brd_title {
+		color: #2A3B4E;
+		font-weight: 700;
+	}
+	.agt-brd-content ul {
+		background: #FFFFFF33;
+		border: 1px solid #2A3B4E99;
+	}
+	.agt-brd-content ul li {
+		color: rgba(42, 59, 78, .60);
+	}
+	.agt-brd-content ul li a {
+		color: #2A3B4E;
+	}
+	.agt-brd-content ul li:before {
+		background-image: url(../imgs/icon/arrow-9.svg);
+	}
+	.agt-brd-content {
+		padding: 150px 0px 156px;
+	}
+	.agn-solution-6-item {
+		margin-bottom: 0;
+	}
+	.agt-brd-text-2.ver_4 .agt-single-title {
+		line-height: 1;
+		color: #2A3B4E;
+		font-weight: 500;
+		max-width: 950px;
+		text-transform: uppercase;
+	}
+	.agt-brd-section-2 .color-shadow {
+		width: auto;
+		height: auto;
+		bottom: -40px;
+		right: 100px;
+		filter: blur(0);
+		background-color: transparent;
+	}
+	.agt-td-contact-content {
+		background-color: #F2F4F4;
+		.agt-cn-form {
+			clip-path: none;
+			background-color: transparent;
+		}
+	}
+}
+.agt-law-ft-exp-content {
+	gap: 16px;
+	display: flex;
+	@media #{$lg,$md,$sm,$xs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.agt-law-ft-exp-sec {
+	.agt-law-ab-img {
+		left: 0;
+		z-index: 1;
+		top: 60px;
+		img {
+			mix-blend-mode: luminosity;
+		}
+	}
+}
+.agt-law-ft-exp-text {
+	width: 100%;
+	max-width: 1048px;
+	padding-top: 190px;
+	padding-bottom: 180px;
+	background-color: #F7F5EF;
+	.agt-law-ft-exp-title {
+		margin: 0 auto;
+		max-width: 645px;
+		.agn-sec-title-6 {
+			padding-bottom: 25px;
+		}
+		p {
+			color: #2A3B4E;
+		}
+		ul {
+			margin-top: 50px;
+			margin-bottom: 25px;
+			li {
+				width: 40%;
+				color: #2A3B4E;
+				padding-left: 30px;
+				margin-bottom: 18px;
+				position: relative;
+				@media #{$xs} {
+					width: 100%;
+				}
+				&:before {
+					left: 0;
+					top: 4px;
+					width: 20px;
+					content: '';
+					height: 20px;
+					position: absolute;
+					background-image: url(../imgs/icon/flw.svg);
+				}
+			}
+		}
+	}
+	@media #{$xxxl} {
+		max-width: 900px;
+	}
+	@media #{$xxl} {
+		max-width: 700px;
+	}
+	@media #{$xl} {
+		max-width: 600px;
+		padding-left: 15px;
+		padding-top: 100px;
+		padding-bottom: 80px;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		max-width: 100%;
+		padding: 60px 15px;
+	}
+}
+.agt-law-exp {
+	max-width: 855px;
+	.item-img-exp {
+		gap: 16px;
+		margin-top: 16px;
+		@media #{$xs} {
+			flex-wrap: wrap;
+		}
+		.item-exp {
+			width: 100%;
+			max-width: 420px;
+			padding: 60px 40px 40px;
+			background-color: #2A3B4E;
+			.exp-cta {
+				gap: 15px;
+				margin-top: 45px;
+				.item-icon {
+					color: #fff;
+					width: 36px;
+					height: 36px;
+					font-size: 14px;
+					border-radius: 100%;
+					border: 1px solid #FFFFFF;
+				}
+				.item-text {
+					span,p {
+						color: #fff;
+						line-height: 1;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.exp-img {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.exp-item  {
+			gap: 16px;
+			display: flex;
+			align-items: end;
+			margin-bottom: 30px;
+			@media #{$xs} {
+				display: block;
+				text-align: center;
+			}
+			h3 {
+				width: 150px;
+				color: #F7F5EF;
+				font-size: 90px;
+				line-height: 1;
+				@media #{$xl} {
+					font-size: 70px;
+				}
+				@media #{$xs} {
+					width: auto;
+					font-size: 50px;
+				}
+			}
+			p {
+				color: #F7F5EF;
+				max-width: 115px;
+				font-size: 20px;
+				@media #{$xs} {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+.agt-law-team-content {
+	padding-left: 145px;
+	@media #{$lg,$md,$sm,$xs} {
+		padding-left: 0;
+	}
+	.agn-team-4-member-single {
+		margin-bottom: 32px;
+	}
+}
+.agt-law-join-team {
+	margin-top: 30px;
+	padding: 35px 0px;
+	border-top: 1px solid #2A3B4E3D;
+	border-bottom: 1px solid #2A3B4E3D;
+	p {
+		color: #2A3B4E;
+	}
+	a {
+		color: #C7A75A;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-family: var(--lora) !important;
+	}
+}
+.agt-law-achivement-sec {
+	.agn-feature-6-sec-title {
+		max-width: 100%;
+		margin-bottom: 40px;
 	}
 }

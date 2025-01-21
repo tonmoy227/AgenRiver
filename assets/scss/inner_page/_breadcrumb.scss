@@ -53,6 +53,10 @@
 		border-radius: 0;
 		background-color: #F0F7F7;
 	}
+	&.law_ver {
+		margin-top: 96px;
+		border-radius: 0;
+	}
 	.agt-brd-bg-2 {
 		top: 0;
 		right: 0;
@@ -116,6 +120,35 @@
 }
 .agt-brd-section-2 {
 	z-index: 1;
+	&.law_ver {
+		margin-top: 96px;
+	}
+	.agt-blog-thumb-bg {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+		position: absolute;
+		background-color: #1D1D3D;
+		img {
+			width: 100%;
+			height: 100%;
+			opacity: .48;
+			object-fit: cover;
+		}
+	}
+	.agt-brd-top-shape {
+		top: -220px;
+		width: 100%;
+		z-index: -1;
+		height: 460px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	.color-shadow {
 		right: 150px;
 		width: 300px;
@@ -364,6 +397,101 @@
 		@media #{$xxs} {
 			font-size: 40px;
 			padding-top: 20px;
+		}
+	}
+}
+.agt-brd-section-4 {
+	z-index: 1;
+	overflow: hidden;
+	.container {
+		margin: 0 auto;
+		max-width: 1320px;
+	}
+	.agt-brd-top-shape {
+		top: -220px;
+		width: 100%;
+		z-index: -1;
+		height: 460px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.agt-brd-content-4 {
+	padding-top: 200px;
+	padding-bottom: 80px;
+	font-family: var(--inter);
+	@media #{$xs} {
+		padding-top: 150px;
+	}
+	.agt_back_link {
+		color: #10151C;
+		i {
+			margin-right: 5px;
+			color:  var(--agt-base-color-9);;
+		}
+	}
+	.agt-brd-text-wrap {
+		gap: 30px;
+		padding-top: 65px;
+		justify-content: space-between;
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			flex-wrap: wrap;
+		}
+		@media #{$xs} {
+			padding-top: 30px;
+		}
+	}
+	.item-title {
+		.brd_title {
+			color: #10151C;
+			font-size: 56px;
+			font-weight: 600;
+			padding-bottom: 20px;
+			@media #{$xs} {
+				font-size: 40px;
+			}
+		}
+		p {
+			color: rgba(37, 44, 53, .72);
+			span {
+				color: #10151C;
+			}
+		}
+	}
+	.item-price {
+		text-align: right;
+		@media #{$md,$sm,$xs} {
+			text-align: left;
+		}
+
+		li {
+			margin-left: 4px;
+			a {
+				width: 48px;
+				height: 48px;
+				display: flex;
+				border-radius: 4px;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid #10151C33;
+				&:hover {
+					color: #fff;
+					border: 1px solid var(--agn-clr-pr-4);
+					background-color: var(--agn-clr-pr-4);
+				}
+			}
+		}
+		span {
+			color: #10151C;
+			font-size: 48px;
+			margin-top: 30px;
+			font-weight: 600;
+			@media #{$xs} {
+				font-size: 30px;
+			}
 		}
 	}
 }

@@ -3961,7 +3961,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     search-box-css-end
 */
 /* 
-	preloader-css-start
+  preloader-css-start
 */
 #preloader {
   position: fixed;
@@ -4074,7 +4074,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 /* 
-	preloader-css-end
+  preloader-css-end
 */
 /* 
     components-start

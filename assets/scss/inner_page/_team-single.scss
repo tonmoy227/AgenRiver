@@ -1,6 +1,8 @@
 .agt-team-details-section {
+	z-index: 2;
 	position: relative;
-	&.ver_2 {
+	&.ver_2,
+	&.ver_3 {
 		z-index: 1;
 		@media #{$xl,$lg,$md,$sm,$xs} {
 			padding-bottom: 80px;
@@ -20,6 +22,9 @@
 				display: none;
 			}
 		}
+	}
+	&.ver_3 {
+		font-family: var(--inter);
 	}
 }
 .agt-tmd-content {

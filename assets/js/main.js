@@ -2097,5 +2097,53 @@ if(window.innerWidth> 1200){
 		});
 	}
 };
-
+var quick_view = new Swiper(".agt-prot-gl-thumb", {
+	loop: true,
+	spaceBetween: 16,
+	slidesPerView: 4,
+	navigation: {
+		prevEl: ".views-button-prev",
+		nextEl: ".views-button-next",
+	},
+	breakpoints: {  
+		'1400': {
+			slidesPerView: 4,
+		},
+		'1200': {
+			slidesPerView: 4,
+		},
+		'1024': {
+			slidesPerView: 4,
+		},
+		'991': {
+			slidesPerView: 3,
+		},
+		'768': {
+			slidesPerView: 3,
+		},
+		'577': {
+			slidesPerView: 2,
+		},
+		'0': {
+			slidesPerView: 2,
+		},
+	},
+});
+var swiper2 = new Swiper(".agt-prot-gl-slide", {
+	loop: true,
+	spaceBetween: 0,
+	speed: 1000,
+	slidesPerView: 1,
+	effect: "fade",
+	fadeEffect: {
+		crossFade: true,
+	},
+	navigation: {
+		prevEl: ".views-button-prev",
+		nextEl: ".views-button-next",
+	},
+	thumbs: {
+		swiper: quick_view,
+	},
+});
 })(jQuery);

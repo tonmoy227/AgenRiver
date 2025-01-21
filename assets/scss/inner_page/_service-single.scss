@@ -240,4 +240,38 @@
 			border-radius: 8px;
 		}
 	}
+	&.ver_2 {
+		h2,h3 {
+			color: #022946;
+			font-size: 26px;
+			text-transform: uppercase;
+		}
+		p {
+			color: #1D1D3D;
+		}
+		.list_item_law {
+			li {
+				color: #2A3B4E;
+				margin-bottom: 25px;
+				padding-left: 30px;
+				position: relative;
+				&:before {
+					left: 0;
+					top: 2px;
+					width: 24px;
+					content: '';
+					height: 24px;
+					position: absolute;
+					background-image: url(../imgs/icon/spark3.svg);
+				}
+				.v-title {
+					color: #1D1D3D;
+					display: block;
+					font-weight: 500;
+					padding-bottom: 10px;
+					font-family: var(--lora);
+				}
+			}
+		}
+	}
 }

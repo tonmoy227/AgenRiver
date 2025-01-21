@@ -264,3 +264,24 @@
 	max-width: 100%;
 	margin-bottom: 30px;
 }
+.agn-home-4 {
+	&.inner_ver {
+		font-family: var(--inter);
+		h1,h2,h3,h4,h5,h6 {
+			font-family: var(--ethereal) !important;
+		}
+		.agt-tmd-content .item-text .item-name-degi span {
+			color: var(--agn-clr-pr-4);
+		}
+		.agt-td-contact-content {
+			background-color: #F4F4F4;
+			.agt-cn-form {
+				clip-path: none;
+				background-color: transparent;
+			}
+		}
+		.agt-td-contact-content .agt-cn-form.ver_2 .agt-contact-form-input button {
+			background-color: var(--agn-clr-pr-4);
+		}
+	}
+}

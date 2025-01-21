@@ -238,3 +238,53 @@
 		}
 	}
 }
+.agt-blog-text-area-3 {
+	.item-img-wrap-row .item-img {
+		overflow: hidden;
+		border-radius: 16px;
+	}
+	.item-text-area {
+		margin: 0 auto;
+		max-width: 730px;
+		p {
+			color: #252C35;
+			padding-bottom: 40px;
+			span {
+				font-size: 48px;
+				font-weight: 500;
+			}
+		}
+		h3 {
+			font-size: 28px;
+			font-weight: 500;
+			padding-bottom: 20px;
+		}
+		ul {
+			margin-bottom: 20px;
+			li {
+				padding-left: 18px;
+				margin-bottom: 25px;
+				position: relative;
+				&:before {
+					left: 0;
+					top: 10px;
+					width: 6px;
+					height: 6px;
+					content: '';
+					position: absolute;
+					border-radius: 100%;
+					background-color: var(--agn-clr-pr-4);;
+				}
+				span {
+					display: inline-block;
+				}
+				.item-title {
+					color: #252C35;
+					font-size: 18px;
+					font-weight: 600;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+}
